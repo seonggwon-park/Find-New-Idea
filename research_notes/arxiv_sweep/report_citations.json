@@ -1,0 +1,783 @@
+[
+ {
+  "id": "2307.13304",
+  "tags": [
+   "V"
+  ],
+  "contexts": [
+   "1. 엄밀한 이론은 거의 전부 \"층별 MSE proxy\" 위에 있다(QuIP 비간섭성 정리, GPTQ=Babai nearest-plane, 격자/TCQ 율-왜곡). proxy에서 end-to-end 손실로 가는 다리는 1차(HIGGS linearity theorem, KL≈¼‖δ‖²)이거나 느슨한 Lipschitz 상한뿐이다 ([QuIP 2307.13304](https://arxiv.org/abs/2307.13304) [V], [GPTQ=Babai 2507.18553](https://arxiv.org/abs/2507.18553) [S], [Provable PTQ 2508.04853](https://arxiv.org/abs/2508.04853) [S], [HIGGS 2411.17525](https://arxiv.org/abs/2411.17525) [S])."
+  ]
+ },
+ {
+  "id": "2507.18553",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "1. 엄밀한 이론은 거의 전부 \"층별 MSE proxy\" 위에 있다(QuIP 비간섭성 정리, GPTQ=Babai nearest-plane, 격자/TCQ 율-왜곡). proxy에서 end-to-end 손실로 가는 다리는 1차(HIGGS linearity theorem, KL≈¼‖δ‖²)이거나 느슨한 Lipschitz 상한뿐이다 ([QuIP 2307.13304](https://arxiv.org/abs/2307.13304) [V], [GPTQ=Babai 2507.18553](https://arxiv.org/abs/2507.18553) [S], [Provable PTQ 2508.04853](https://arxiv.org/abs/2508.04853) [S], [HIGGS 2411.17525](https://arxiv.org/abs/2411.17525) [S])."
+  ]
+ },
+ {
+  "id": "2508.04853",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "1. 엄밀한 이론은 거의 전부 \"층별 MSE proxy\" 위에 있다(QuIP 비간섭성 정리, GPTQ=Babai nearest-plane, 격자/TCQ 율-왜곡). proxy에서 end-to-end 손실로 가는 다리는 1차(HIGGS linearity theorem, KL≈¼‖δ‖²)이거나 느슨한 Lipschitz 상한뿐이다 ([QuIP 2307.13304](https://arxiv.org/abs/2307.13304) [V], [GPTQ=Babai 2507.18553](https://arxiv.org/abs/2507.18553) [S], [Provable PTQ 2508.04853](https://arxiv.org/abs/2508.04853) [S], [HIGGS 2411.17525](https://arxiv.org/abs/2411.17525) [S])."
+  ]
+ },
+ {
+  "id": "2411.17525",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "1. 엄밀한 이론은 거의 전부 \"층별 MSE proxy\" 위에 있다(QuIP 비간섭성 정리, GPTQ=Babai nearest-plane, 격자/TCQ 율-왜곡). proxy에서 end-to-end 손실로 가는 다리는 1차(HIGGS linearity theorem, KL≈¼‖δ‖²)이거나 느슨한 Lipschitz 상한뿐이다 ([QuIP 2307.13304](https://arxiv.org/abs/2307.13304) [V], [GPTQ=Babai 2507.18553](https://arxiv.org/abs/2507.18553) [S], [Provable PTQ 2508.04853](https://arxiv.org/abs/2508.04853) [S], [HIGGS 2411.17525](https://arxiv.org/abs/2411.17525) [S])."
+  ]
+ },
+ {
+  "id": "2405.16406",
+  "tags": [
+   "V"
+  ],
+  "contexts": [
+   "2. 회전은 ℓ₂ 노름, Hessian 스펙트럼, 토큰 간 동적 범위를 바꾸지 못한다(직교성의 결과). SpinQuant가 보고한 \"Haar 회전 간 13점 편차\"는 비간섭성 보장이 손실을 통제하지 못한다는 직접 증거다 ([SpinQuant 2405.16406](https://arxiv.org/abs/2405.16406) [V])."
+  ]
+ },
+ {
+  "id": "2411.04330",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "3. 정밀도 스케일링 법칙(Kumar et al. [2411.04330](https://arxiv.org/abs/2411.04330) [S], Ouyang et al. [2411.17691](https://arxiv.org/abs/2411.17691) [S])은 적합식이며 기작이 없다. 2025–26에 \"LR이 감쇠하면 손실과 양자화 오차가 분리된다\"는 반론이 나왔다 ([Catalan-Tatjer et al. 2510.06213, ICLR 2026](https://arxiv.org/abs/2510.06213) [S])."
+  ]
+ },
+ {
+  "id": "2411.17691",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "3. 정밀도 스케일링 법칙(Kumar et al. [2411.04330](https://arxiv.org/abs/2411.04330) [S], Ouyang et al. [2411.17691](https://arxiv.org/abs/2411.17691) [S])은 적합식이며 기작이 없다. 2025–26에 \"LR이 감쇠하면 손실과 양자화 오차가 분리된다\"는 반론이 나왔다 ([Catalan-Tatjer et al. 2510.06213, ICLR 2026](https://arxiv.org/abs/2510.06213) [S])."
+  ]
+ },
+ {
+  "id": "2510.06213",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "3. 정밀도 스케일링 법칙(Kumar et al. [2411.04330](https://arxiv.org/abs/2411.04330) [S], Ouyang et al. [2411.17691](https://arxiv.org/abs/2411.17691) [S])은 적합식이며 기작이 없다. 2025–26에 \"LR이 감쇠하면 손실과 양자화 오차가 분리된다\"는 반론이 나왔다 ([Catalan-Tatjer et al. 2510.06213, ICLR 2026](https://arxiv.org/abs/2510.06213) [S]).",
+   "- Catalan-Tatjer, Ajroldi, Geiping은 32B/15T 궤적까지 분석해 \"LR이 감쇠하면 검증 손실과 양자화 오차가 분리된다\"고 보고하고 데이터량이 본질적으로 해롭다는 통설에 반박했다 ([2510.06213, ICLR 2026](https://arxiv.org/abs/2510.06213) [S]). 이는 PTQ 측 관찰이며, 학습 중 저정밀 격차의 분해로 확장되지 않았다.",
+   "A1. 과학습 취약성의 기작(토큰 수 vs LR 스케줄·sharpness). 가설은 \"Kumar/Ouyang의 D^γ 효과는 상당 부분 cosine decay의 말기 곡률 상승\"이었고 QiD ≈ ΣΔ_g²tr(H_g)/24 분해와 재평탄화 개입을 제안할 계획이었다. 그러나 Catalan-Tatjer, Ajroldi, Geiping([2510.06213, ICLR 2026](https://arxiv.org/abs/2510.06213) [S])이 32B/15T 궤적에서 \"LR decay 후 손실과 양자화 오차가 분리된다\"고 이미 보고했다. 남는 기여는 Δ² vs tr(H) 분해와 개입 실험이며, 아이디어 4에 흡수했다."
+  ]
+ },
+ {
+  "id": "2405.18137",
+  "tags": [
+   "V"
+  ],
+  "contexts": [
+   "5. 후학습 측에서는 \"preimage box\"(한 양자화 모델의 FP 원상)가 공격(Egashira et al. [2405.18137](https://arxiv.org/abs/2405.18137) [V]), unlearning 역전([2410.16454](https://arxiv.org/abs/2410.16454) [S]), LoRA 머지 실패([QA-LoRA 2309.14717](https://arxiv.org/abs/2309.14717) [V])를 관통하지만 누구도 통합 정리로 쓰지 않았다.",
+   "- Egashira et al.은 preimage box를 계산해 PGD로 FP 가중치를 수리하는 공격을 NF4/INT8/FP4 ([2405.18137, NeurIPS 2024](https://arxiv.org/abs/2405.18137) [V]), GGUF 9종 ([2505.23786, ICML 2025](https://arxiv.org/abs/2505.23786) [S]), outlier 주입으로 AWQ/GPTQ까지 ([2605.15152, ICML 2026](https://arxiv.org/abs/2605.15152) [S]) 확장했다. Gaussian 노이즈 방어는 outlier 주입(Δ 확대)에 깨졌다. dither를 방어로 검토한 문헌은 검색에서 나오지 않았다."
+  ]
+ },
+ {
+  "id": "2410.16454",
+  "tags": [
+   "?",
+   "V"
+  ],
+  "contexts": [
+   "5. 후학습 측에서는 \"preimage box\"(한 양자화 모델의 FP 원상)가 공격(Egashira et al. [2405.18137](https://arxiv.org/abs/2405.18137) [V]), unlearning 역전([2410.16454](https://arxiv.org/abs/2410.16454) [S]), LoRA 머지 실패([QA-LoRA 2309.14717](https://arxiv.org/abs/2309.14717) [V])를 관통하지만 누구도 통합 정리로 쓰지 않았다.",
+   "- unlearning 역전: 효용 제약 unlearning 모델은 FP에서 잊은 지식 21%를 유지하는데 4-bit 후 83%로 복귀 ([Zhang et al. 2410.16454, ICLR 2025](https://arxiv.org/abs/2410.16454) [V: repo]). SURE(salient 가중치에 큰 LR)가 완화한다. 이론은 없다."
+  ]
+ },
+ {
+  "id": "2309.14717",
+  "tags": [
+   "?",
+   "U",
+   "V"
+  ],
+  "contexts": [
+   "5. 후학습 측에서는 \"preimage box\"(한 양자화 모델의 FP 원상)가 공격(Egashira et al. [2405.18137](https://arxiv.org/abs/2405.18137) [V]), unlearning 역전([2410.16454](https://arxiv.org/abs/2410.16454) [S]), LoRA 머지 실패([QA-LoRA 2309.14717](https://arxiv.org/abs/2309.14717) [V])를 관통하지만 누구도 통합 정리로 쓰지 않았다.",
+   "- 머지 문제의 유일한 닫힌 해법은 QA-LoRA의 \"zero-point에 접기\"이며 어댑터를 그룹 상수로 제약한다 ([2309.14717, ICLR 2024](https://arxiv.org/abs/2309.14717) [V: repo]). 머지 오차 상한은 없다. \"델타가 4-bit 그룹 스텝 아래라 66–98%가 지워진다\"는 2026 시스템 논문 보고는 이 세션에서 ID를 확인하지 못했다 ([2609.18063] [U])."
+  ]
+ },
+ {
+  "id": "2406.03482",
+  "tags": [
+   "V"
+  ],
+  "contexts": [
+   "- QJL은 \"비편향 내적 추정량, 최소 왜곡\"을 증명했지만 ([QJL 2406.03482, AAAI 2025](https://arxiv.org/abs/2406.03482) [V]) vLLM 구현은 QJL을 제외했고, 그 사유를 \"5개 이상 독립 그룹의 합의: softmax가 분산을 증폭\"으로 적었다 [V]. 가장 가까운 분석인 D'Alberto의 노트([2605.08114](https://arxiv.org/abs/2605.08114) [S])는 \"QJL이 K의 내적 분산을 π/2배 키우고 softmax가 Jensen으로 증폭한다\"는 정성적 주장이며, 토큰 간 분산 이질성이 만드는 체계적 편향, 보정식, K-vs-V 할당 규칙은 없다."
+  ]
+ },
+ {
+  "id": "2605.08114",
+  "tags": [
+   "?",
+   "S"
+  ],
+  "contexts": [
+   "- QJL은 \"비편향 내적 추정량, 최소 왜곡\"을 증명했지만 ([QJL 2406.03482, AAAI 2025](https://arxiv.org/abs/2406.03482) [V]) vLLM 구현은 QJL을 제외했고, 그 사유를 \"5개 이상 독립 그룹의 합의: softmax가 분산을 증폭\"으로 적었다 [V]. 가장 가까운 분석인 D'Alberto의 노트([2605.08114](https://arxiv.org/abs/2605.08114) [S])는 \"QJL이 K의 내적 분산을 π/2배 키우고 softmax가 Jensen으로 증폭한다\"는 정성적 주장이며, 토큰 간 분산 이질성이 만드는 체계적 편향, 보정식, K-vs-V 할당 규칙은 없다.",
+   "novelty 높음. 유도는 학부 수준이지만 서빙 현장의 실제 실패(QJL 제외), 널리 쓰이는 경험 규칙(KIVI), 그리고 두 상한의 모순을 하나의 식으로 설명하고 비용 0의 보정을 준다. 리스크: D'Alberto([2605.08114](https://arxiv.org/abs/2605.08114))와 OSCAR([2605.17757](https://arxiv.org/abs/2605.17757))가 인접하므로 \"이분산 편향과 보정\"을 전면에 세워 차별화해야 한다. 2차 전개가 깨질 정도로 σ²가 크면 정리는 정성적 설명으로 격하된다."
+  ]
+ },
+ {
+  "id": "2402.02750",
+  "tags": [
+   "V"
+  ],
+  "contexts": [
+   "- KIVI의 per-channel K / per-token V는 \"outlier 채널\"과 \"스트리밍 편의\"로 정당화됐고 최적성 증명이 없다 ([KIVI 2402.02750](https://arxiv.org/abs/2402.02750) [V]). KVLinC는 반대로 \"raw key per-channel + Hadamard value per-token\"이 최선이라 보고했는데 설명이 없다 ([2510.05373](https://arxiv.org/abs/2510.05373) [S])."
+  ]
+ },
+ {
+  "id": "2510.05373",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- KIVI의 per-channel K / per-token V는 \"outlier 채널\"과 \"스트리밍 편의\"로 정당화됐고 최적성 증명이 없다 ([KIVI 2402.02750](https://arxiv.org/abs/2402.02750) [V]). KVLinC는 반대로 \"raw key per-channel + Hadamard value per-token\"이 최선이라 보고했는데 설명이 없다 ([2510.05373](https://arxiv.org/abs/2510.05373) [S])."
+  ]
+ },
+ {
+  "id": "2608.20988",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 어텐션 민감도 이론은 1차 Jacobian 상한([2608.20988](https://arxiv.org/abs/2608.20988) [S])과 e^{±2η} 승법 상한([SpectrumKV 2606.08635](https://arxiv.org/abs/2606.08635) [S])뿐이고, 둘은 \"날카로운 어텐션이 더 민감하다/덜 민감하다\"로 서로 반대 직관을 준다. 2차 항을 쓰면 이 둘이 화해된다."
+  ]
+ },
+ {
+  "id": "2606.08635",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 어텐션 민감도 이론은 1차 Jacobian 상한([2608.20988](https://arxiv.org/abs/2608.20988) [S])과 e^{±2η} 승법 상한([SpectrumKV 2606.08635](https://arxiv.org/abs/2606.08635) [S])뿐이고, 둘은 \"날카로운 어텐션이 더 민감하다/덜 민감하다\"로 서로 반대 직관을 준다. 2차 항을 쓰면 이 둘이 화해된다."
+  ]
+ },
+ {
+  "id": "2606.13233",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- LM head 쪽은 ReSET([2606.13233](https://arxiv.org/abs/2606.13233) [S])이 \"NVFP4가 토큰 엔트로피를 이동시킨다\"고 관찰했고, GPTQ 4-bit가 ECE를 악화시킨다는 측정([2604.08976](https://arxiv.org/abs/2604.08976) [S])이 있으나 유도된 보정은 없다."
+  ]
+ },
+ {
+  "id": "2604.08976",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- LM head 쪽은 ReSET([2606.13233](https://arxiv.org/abs/2606.13233) [S])이 \"NVFP4가 토큰 엔트로피를 이동시킨다\"고 관찰했고, GPTQ 4-bit가 ECE를 악화시킨다는 측정([2604.08976](https://arxiv.org/abs/2604.08976) [S])이 있으나 유도된 보정은 없다."
+  ]
+ },
+ {
+  "id": "2605.17757",
+  "tags": [
+   "?",
+   "S"
+  ],
+  "contexts": [
+   "novelty 높음. 유도는 학부 수준이지만 서빙 현장의 실제 실패(QJL 제외), 널리 쓰이는 경험 규칙(KIVI), 그리고 두 상한의 모순을 하나의 식으로 설명하고 비용 0의 보정을 준다. 리스크: D'Alberto([2605.08114](https://arxiv.org/abs/2605.08114))와 OSCAR([2605.17757](https://arxiv.org/abs/2605.17757))가 인접하므로 \"이분산 편향과 보정\"을 전면에 세워 차별화해야 한다. 2차 전개가 깨질 정도로 σ²가 크면 정리는 정성적 설명으로 격하된다.",
+   "- MHA에서는 query 공분산 가중 변환이 Hadamard를 이긴다는 주장이 있다 (OSCAR [2605.17757](https://arxiv.org/abs/2605.17757) [S], Spend Bits Where Queries Look [2608.04074](https://arxiv.org/abs/2608.04074) [S]). MLA의 latent는 모든 헤드가 공유하므로 가중 행렬 M이 헤드 합으로 정의되는 점이 구조적으로 다르고, 변환을 가중치에 접을 수 있다는 점은 MHA의 online Hadamard(QuaRot)와 달리 디코드 비용이 0이다."
+  ]
+ },
+ {
+  "id": "2410.13229",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 학술 논문으로 SSM \"상태\" 양자화를 다룬 것은 0건이다. Quamba/Quamba2는 가중치·입력·B/C를 양자화하고 ([2410.13229](https://arxiv.org/abs/2410.13229), [2503.22879](https://arxiv.org/abs/2503.22879) [S]), eMamba는 \"상태를 양자화하면 비트폭이 폭발하고 재양자화하면 정보가 사라진다\"는 딜레마만 적었다 ([2508.10370](https://arxiv.org/abs/2508.10370) [S]). Ternary Mamba는 사후 점별 보정(Kalman gain, James–Stein)이 perplexity를 악화시킨다고 보고하며 \"오차가 이력 의존적이어서 점별 출력 보정으로 되돌릴 수 없다\"고 썼다 ([2606.18114](https://arxiv.org/abs/2606.18114) [S]). 이는 루프 안의 피드백이 필요하다는 뜻이다."
+  ]
+ },
+ {
+  "id": "2503.22879",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 학술 논문으로 SSM \"상태\" 양자화를 다룬 것은 0건이다. Quamba/Quamba2는 가중치·입력·B/C를 양자화하고 ([2410.13229](https://arxiv.org/abs/2410.13229), [2503.22879](https://arxiv.org/abs/2503.22879) [S]), eMamba는 \"상태를 양자화하면 비트폭이 폭발하고 재양자화하면 정보가 사라진다\"는 딜레마만 적었다 ([2508.10370](https://arxiv.org/abs/2508.10370) [S]). Ternary Mamba는 사후 점별 보정(Kalman gain, James–Stein)이 perplexity를 악화시킨다고 보고하며 \"오차가 이력 의존적이어서 점별 출력 보정으로 되돌릴 수 없다\"고 썼다 ([2606.18114](https://arxiv.org/abs/2606.18114) [S]). 이는 루프 안의 피드백이 필요하다는 뜻이다."
+  ]
+ },
+ {
+  "id": "2508.10370",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 학술 논문으로 SSM \"상태\" 양자화를 다룬 것은 0건이다. Quamba/Quamba2는 가중치·입력·B/C를 양자화하고 ([2410.13229](https://arxiv.org/abs/2410.13229), [2503.22879](https://arxiv.org/abs/2503.22879) [S]), eMamba는 \"상태를 양자화하면 비트폭이 폭발하고 재양자화하면 정보가 사라진다\"는 딜레마만 적었다 ([2508.10370](https://arxiv.org/abs/2508.10370) [S]). Ternary Mamba는 사후 점별 보정(Kalman gain, James–Stein)이 perplexity를 악화시킨다고 보고하며 \"오차가 이력 의존적이어서 점별 출력 보정으로 되돌릴 수 없다\"고 썼다 ([2606.18114](https://arxiv.org/abs/2606.18114) [S]). 이는 루프 안의 피드백이 필요하다는 뜻이다."
+  ]
+ },
+ {
+  "id": "2606.18114",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 학술 논문으로 SSM \"상태\" 양자화를 다룬 것은 0건이다. Quamba/Quamba2는 가중치·입력·B/C를 양자화하고 ([2410.13229](https://arxiv.org/abs/2410.13229), [2503.22879](https://arxiv.org/abs/2503.22879) [S]), eMamba는 \"상태를 양자화하면 비트폭이 폭발하고 재양자화하면 정보가 사라진다\"는 딜레마만 적었다 ([2508.10370](https://arxiv.org/abs/2508.10370) [S]). Ternary Mamba는 사후 점별 보정(Kalman gain, James–Stein)이 perplexity를 악화시킨다고 보고하며 \"오차가 이력 의존적이어서 점별 출력 보정으로 되돌릴 수 없다\"고 썼다 ([2606.18114](https://arxiv.org/abs/2606.18114) [S]). 이는 루프 안의 피드백이 필요하다는 뜻이다."
+  ]
+ },
+ {
+  "id": "2604.12374",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- Nemotron 3 Super는 Mamba 상태를 기본 FP32로 두고, FP16으로 캐스팅하면 W8A8에서 verbosity가 최대 40% 증가했다고 보고했다 ([2604.12374](https://arxiv.org/abs/2604.12374) [S]). Nemotron-Labs-3-Puzzle도 상태는 FP16 유지 ([2607.04371](https://arxiv.org/abs/2607.04371) [S])."
+  ]
+ },
+ {
+  "id": "2607.04371",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- Nemotron 3 Super는 Mamba 상태를 기본 FP32로 두고, FP16으로 캐스팅하면 W8A8에서 verbosity가 최대 40% 증가했다고 보고했다 ([2604.12374](https://arxiv.org/abs/2604.12374) [S]). Nemotron-Labs-3-Puzzle도 상태는 FP16 유지 ([2607.04371](https://arxiv.org/abs/2607.04371) [S])."
+  ]
+ },
+ {
+  "id": "2603.16731",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 최적화기 상태 양자화에서 동일 현상(\"EMA 상태 동결, 리셋으로 복구\")을 모델링한 Topollai–Choromanska([2603.16731](https://arxiv.org/abs/2603.16731) [S])가 있다. SSM 상태와 EMA는 수학적으로 같은 1차 IIR 재귀다."
+  ]
+ },
+ {
+  "id": "2509.23202",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 포맷 비교는 전부 경험적이다: Egiazarian et al.은 \"NVFP4·MXFP4 모두 손실이 있고 MXFP4는 약 10% 상대 하락\"([2509.23202, ICLR 2026](https://arxiv.org/abs/2509.23202) [S]); Meta는 소프트웨어 스케일 조정으로 MXFP4 격차를 1% 미만으로 ([2603.08713](https://arxiv.org/abs/2603.08713) [S]); NVIDIA는 \"MXFP4 상대오차 ≈2.5% vs NVFP4 1.5%\"([2509.25149](https://arxiv.org/abs/2509.25149) [S]); Mishra et al.은 UE8M0 지수를 내림하면 발산하고 올림하면 8B/15T에서 BF16과 일치한다고 보고 ([2506.08027](https://arxiv.org/abs/2506.08027) [S])."
+  ]
+ },
+ {
+  "id": "2603.08713",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 포맷 비교는 전부 경험적이다: Egiazarian et al.은 \"NVFP4·MXFP4 모두 손실이 있고 MXFP4는 약 10% 상대 하락\"([2509.23202, ICLR 2026](https://arxiv.org/abs/2509.23202) [S]); Meta는 소프트웨어 스케일 조정으로 MXFP4 격차를 1% 미만으로 ([2603.08713](https://arxiv.org/abs/2603.08713) [S]); NVIDIA는 \"MXFP4 상대오차 ≈2.5% vs NVFP4 1.5%\"([2509.25149](https://arxiv.org/abs/2509.25149) [S]); Mishra et al.은 UE8M0 지수를 내림하면 발산하고 올림하면 8B/15T에서 BF16과 일치한다고 보고 ([2506.08027](https://arxiv.org/abs/2506.08027) [S])."
+  ]
+ },
+ {
+  "id": "2509.25149",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 포맷 비교는 전부 경험적이다: Egiazarian et al.은 \"NVFP4·MXFP4 모두 손실이 있고 MXFP4는 약 10% 상대 하락\"([2509.23202, ICLR 2026](https://arxiv.org/abs/2509.23202) [S]); Meta는 소프트웨어 스케일 조정으로 MXFP4 격차를 1% 미만으로 ([2603.08713](https://arxiv.org/abs/2603.08713) [S]); NVIDIA는 \"MXFP4 상대오차 ≈2.5% vs NVFP4 1.5%\"([2509.25149](https://arxiv.org/abs/2509.25149) [S]); Mishra et al.은 UE8M0 지수를 내림하면 발산하고 올림하면 8B/15T에서 BF16과 일치한다고 보고 ([2506.08027](https://arxiv.org/abs/2506.08027) [S]).",
+   "- NVIDIA NVFP4 12B/10T: 안정 구간 <1% 격차가 decay 구간에서 >1.5%로 벌어지고, decay 중 BF16/MXFP8 전환이 완화하며 \"forward 전환이 대부분의 이득\"이라 보고 ([2509.25149](https://arxiv.org/abs/2509.25149) [S]). 원인 ablation은 없다."
+  ]
+ },
+ {
+  "id": "2506.08027",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 포맷 비교는 전부 경험적이다: Egiazarian et al.은 \"NVFP4·MXFP4 모두 손실이 있고 MXFP4는 약 10% 상대 하락\"([2509.23202, ICLR 2026](https://arxiv.org/abs/2509.23202) [S]); Meta는 소프트웨어 스케일 조정으로 MXFP4 격차를 1% 미만으로 ([2603.08713](https://arxiv.org/abs/2603.08713) [S]); NVIDIA는 \"MXFP4 상대오차 ≈2.5% vs NVFP4 1.5%\"([2509.25149](https://arxiv.org/abs/2509.25149) [S]); Mishra et al.은 UE8M0 지수를 내림하면 발산하고 올림하면 8B/15T에서 BF16과 일치한다고 보고 ([2506.08027](https://arxiv.org/abs/2506.08027) [S])."
+  ]
+ },
+ {
+  "id": "2609.02846",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 스케일 포맷 제안들(UE5M3 [2609.02846](https://arxiv.org/abs/2609.02846) [S], Four-over-Six [2512.02010](https://arxiv.org/abs/2512.02010) [S], HiFloat4 [2604.08826](https://arxiv.org/abs/2604.08826) [S])은 모두 실험 기반이다."
+  ]
+ },
+ {
+  "id": "2512.02010",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 스케일 포맷 제안들(UE5M3 [2609.02846](https://arxiv.org/abs/2609.02846) [S], Four-over-Six [2512.02010](https://arxiv.org/abs/2512.02010) [S], HiFloat4 [2604.08826](https://arxiv.org/abs/2604.08826) [S])은 모두 실험 기반이다."
+  ]
+ },
+ {
+  "id": "2604.08826",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 스케일 포맷 제안들(UE5M3 [2609.02846](https://arxiv.org/abs/2609.02846) [S], Four-over-Six [2512.02010](https://arxiv.org/abs/2512.02010) [S], HiFloat4 [2604.08826](https://arxiv.org/abs/2604.08826) [S])은 모두 실험 기반이다."
+  ]
+ },
+ {
+  "id": "2606.20381",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- UFP4는 \"E2M1의 RTNE가 음의 기대 라운딩 오차(shrinkage bias)를 가지며 RHT가 이를 증폭한다\"고 주장 ([2606.20381](https://arxiv.org/abs/2606.20381) [S]); 자동 리뷰는 효과 분리가 안 됐다고 지적했다. 정량 이론이 없다.",
+   "- 2026년 그룹들이 각자 다른 병목을 주장한다: Quartet II는 micro-scale SR 분산([2601.22813](https://arxiv.org/abs/2601.22813) [S]), Dong et al.은 hot channel([2602.02047](https://arxiv.org/abs/2602.02047) [S]), TetraJet-v2는 bin 경계 가중치 진동([2510.27527](https://arxiv.org/abs/2510.27527) [S]), UFP4는 shrinkage bias([2606.20381](https://arxiv.org/abs/2606.20381) [S]), Full-Stack FP4는 미양자화 구성요소([2607.04422](https://arxiv.org/abs/2607.04422) [S]). 같은 LR 지점에서 이들을 분리한 실험이 없다."
+  ]
+ },
+ {
+  "id": "2501.02423",
+  "tags": [
+   "U"
+  ],
+  "contexts": [
+   "- Sun et al.의 FP 스케일링 법칙은 (E, M, B)에 대한 적합식이다 ([2501.02423](https://arxiv.org/abs/2501.02423) [U: 내용 미확인])."
+  ]
+ },
+ {
+  "id": "2606.07116",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "증명 가능한 것: Gaussian 블록 가정 하의 모든 기대 왜곡은 1차원 적분으로 정확히 계산되고, UE8M0 올림의 2.16배, 내림의 클리핑 항, shrinkage 편향의 부호는 해석적으로 나온다. 추측: 실제 RHT 후 블록이 Gaussian에 얼마나 가까운지(토큰 수준 스파이크가 남는다는 보고가 있다: [OffQ 2606.07116](https://arxiv.org/abs/2606.07116) [S]), 학습 안정성과 왜곡의 연결(클리핑 편향 → 발산)은 가설이다."
+  ]
+ },
+ {
+  "id": "2601.22813",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 2026년 그룹들이 각자 다른 병목을 주장한다: Quartet II는 micro-scale SR 분산([2601.22813](https://arxiv.org/abs/2601.22813) [S]), Dong et al.은 hot channel([2602.02047](https://arxiv.org/abs/2602.02047) [S]), TetraJet-v2는 bin 경계 가중치 진동([2510.27527](https://arxiv.org/abs/2510.27527) [S]), UFP4는 shrinkage bias([2606.20381](https://arxiv.org/abs/2606.20381) [S]), Full-Stack FP4는 미양자화 구성요소([2607.04422](https://arxiv.org/abs/2607.04422) [S]). 같은 LR 지점에서 이들을 분리한 실험이 없다."
+  ]
+ },
+ {
+  "id": "2602.02047",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 2026년 그룹들이 각자 다른 병목을 주장한다: Quartet II는 micro-scale SR 분산([2601.22813](https://arxiv.org/abs/2601.22813) [S]), Dong et al.은 hot channel([2602.02047](https://arxiv.org/abs/2602.02047) [S]), TetraJet-v2는 bin 경계 가중치 진동([2510.27527](https://arxiv.org/abs/2510.27527) [S]), UFP4는 shrinkage bias([2606.20381](https://arxiv.org/abs/2606.20381) [S]), Full-Stack FP4는 미양자화 구성요소([2607.04422](https://arxiv.org/abs/2607.04422) [S]). 같은 LR 지점에서 이들을 분리한 실험이 없다."
+  ]
+ },
+ {
+  "id": "2510.27527",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 2026년 그룹들이 각자 다른 병목을 주장한다: Quartet II는 micro-scale SR 분산([2601.22813](https://arxiv.org/abs/2601.22813) [S]), Dong et al.은 hot channel([2602.02047](https://arxiv.org/abs/2602.02047) [S]), TetraJet-v2는 bin 경계 가중치 진동([2510.27527](https://arxiv.org/abs/2510.27527) [S]), UFP4는 shrinkage bias([2606.20381](https://arxiv.org/abs/2606.20381) [S]), Full-Stack FP4는 미양자화 구성요소([2607.04422](https://arxiv.org/abs/2607.04422) [S]). 같은 LR 지점에서 이들을 분리한 실험이 없다."
+  ]
+ },
+ {
+  "id": "2607.04422",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 2026년 그룹들이 각자 다른 병목을 주장한다: Quartet II는 micro-scale SR 분산([2601.22813](https://arxiv.org/abs/2601.22813) [S]), Dong et al.은 hot channel([2602.02047](https://arxiv.org/abs/2602.02047) [S]), TetraJet-v2는 bin 경계 가중치 진동([2510.27527](https://arxiv.org/abs/2510.27527) [S]), UFP4는 shrinkage bias([2606.20381](https://arxiv.org/abs/2606.20381) [S]), Full-Stack FP4는 미양자화 구성요소([2607.04422](https://arxiv.org/abs/2607.04422) [S]). 같은 LR 지점에서 이들을 분리한 실험이 없다."
+  ]
+ },
+ {
+  "id": "2606.15007",
+  "tags": [
+   "?",
+   "S"
+  ],
+  "contexts": [
+   "- Nemotron 3 Ultra는 전 텐서 BF16 전환이 발산을 해결하지 못했다고 보고([2606.15007](https://arxiv.org/abs/2606.15007) [S]) — NVFP4 논문과 모순.",
+   "- 2026년 ID 다수가 [S]다. 특히 2606.15007(Nemotron 3 Ultra), 2609.18063(LoRA 머지 소거), 2604.08426(YAKV)은 존재·내용을 PDF로 확인하기 전까지 인용하지 말 것."
+  ]
+ },
+ {
+  "id": "2103.00065",
+  "tags": [
+   "U"
+  ],
+  "contexts": [
+   "- Edge of stability: λ_max(H) ≈ 2/η (GD, [Cohen et al. 2103.00065](https://arxiv.org/abs/2103.00065) [U: 고전, 미재확인]); 적응형 최적화기는 전처리된 sharpness 기준([2207.14484](https://arxiv.org/abs/2207.14484) [U])."
+  ]
+ },
+ {
+  "id": "2207.14484",
+  "tags": [
+   "U"
+  ],
+  "contexts": [
+   "- Edge of stability: λ_max(H) ≈ 2/η (GD, [Cohen et al. 2103.00065](https://arxiv.org/abs/2103.00065) [U: 고전, 미재확인]); 적응형 최적화기는 전처리된 sharpness 기준([2207.14484](https://arxiv.org/abs/2207.14484) [U])."
+  ]
+ },
+ {
+  "id": "2311.09755",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 캘리브레이션 데이터만 바꿔 1,800개 모델을 만든 연구는 \"성능이 캘리브레이션 세트에 따라 변하고 GPTQ는 과적합한다\"고 보고 ([Williams & Aletras 2311.09755, ACL 2024](https://arxiv.org/abs/2311.09755) [S]); 후속은 \"새 모델은 덜 민감\"([2608.01078](https://arxiv.org/abs/2608.01078) [S]); 도메인 일치는 GPTQ엔 돕고 AWQ엔 안 돕는다 ([OpenReview pfw3saHzGU](https://openreview.net/forum?id=pfw3saHzGU) [S]). 전부 경험적이다."
+  ]
+ },
+ {
+  "id": "2608.01078",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 캘리브레이션 데이터만 바꿔 1,800개 모델을 만든 연구는 \"성능이 캘리브레이션 세트에 따라 변하고 GPTQ는 과적합한다\"고 보고 ([Williams & Aletras 2311.09755, ACL 2024](https://arxiv.org/abs/2311.09755) [S]); 후속은 \"새 모델은 덜 민감\"([2608.01078](https://arxiv.org/abs/2608.01078) [S]); 도메인 일치는 GPTQ엔 돕고 AWQ엔 안 돕는다 ([OpenReview pfw3saHzGU](https://openreview.net/forum?id=pfw3saHzGU) [S]). 전부 경험적이다."
+  ]
+ },
+ {
+  "id": "2601.18306",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 다국어·추론 도메인 이동: 영어 캘리브레이션이 저자원 언어를 더 해치고 다국어 캘리브레이션이 PPL을 최대 3.52 낮춤 ([2601.18306](https://arxiv.org/abs/2601.18306) [S]); Qwen3-4B INT3에서 WikiText→Math-CoT 캘리브레이션이 정확도 28%→65% ([2606.25519](https://arxiv.org/abs/2606.25519) [S]). 이동량과 열화를 연결하는 식이 없다."
+  ]
+ },
+ {
+  "id": "2606.25519",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 다국어·추론 도메인 이동: 영어 캘리브레이션이 저자원 언어를 더 해치고 다국어 캘리브레이션이 PPL을 최대 3.52 낮춤 ([2601.18306](https://arxiv.org/abs/2601.18306) [S]); Qwen3-4B INT3에서 WikiText→Math-CoT 캘리브레이션이 정확도 28%→65% ([2606.25519](https://arxiv.org/abs/2606.25519) [S]). 이동량과 열화를 연결하는 식이 없다.",
+   "- Liu et al.은 추론 모델 PTQ를 체계 평가하고 자가생성 추론 트레이스를 캘리브레이션에 썼다 ([2504.04823, COLM 2025](https://arxiv.org/abs/2504.04823) [V: repo]). Qwen3-4B INT3에서 WikiText→Math-CoT 캘리브레이션이 28%→65%, CoT 30k→12k 토큰 ([2606.25519](https://arxiv.org/abs/2606.25519) [S]). 도메인 효과는 크지만 \"무엇이\" 효과를 내는지(엔트로피 프로필 vs 어휘·도메인)는 분리되지 않았다."
+  ]
+ },
+ {
+  "id": "2510.11696",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- QeRL(NVIDIA, ICLR 2026)은 NVFP4+LoRA 롤아웃에서 \"양자화 노이즈가 정책 엔트로피를 올려 탐색을 향상\"한다고 주장하고 IS 보정은 쓰지 않는다 ([2510.11696](https://arxiv.org/abs/2510.11696) [V: README]). FP8-RL([2601.18150](https://arxiv.org/abs/2601.18150) [S]), Jet-RL([2601.14243](https://arxiv.org/abs/2601.14243) [S]), QuRL([2602.13953](https://arxiv.org/abs/2602.13953) [S]), HiFloat4/Rollout-ResQ(\"학습 정밀도를 올리면 FP4 롤아웃이 더 나빠진다\", [2607.26515](https://arxiv.org/abs/2607.26515) [S]), AIS(\"KL이 정책 날카로워짐과 함께 단조 증가, 초기엔 탐색 도움 후기엔 편향\", [2605.13907](https://arxiv.org/abs/2605.13907) [S])가 서로 다른 처방을 낸다. 엔트로피, KL(μ‖π), 보상을 한 런에서 함께 보고한 논문이 없다."
+  ]
+ },
+ {
+  "id": "2601.18150",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- QeRL(NVIDIA, ICLR 2026)은 NVFP4+LoRA 롤아웃에서 \"양자화 노이즈가 정책 엔트로피를 올려 탐색을 향상\"한다고 주장하고 IS 보정은 쓰지 않는다 ([2510.11696](https://arxiv.org/abs/2510.11696) [V: README]). FP8-RL([2601.18150](https://arxiv.org/abs/2601.18150) [S]), Jet-RL([2601.14243](https://arxiv.org/abs/2601.14243) [S]), QuRL([2602.13953](https://arxiv.org/abs/2602.13953) [S]), HiFloat4/Rollout-ResQ(\"학습 정밀도를 올리면 FP4 롤아웃이 더 나빠진다\", [2607.26515](https://arxiv.org/abs/2607.26515) [S]), AIS(\"KL이 정책 날카로워짐과 함께 단조 증가, 초기엔 탐색 도움 후기엔 편향\", [2605.13907](https://arxiv.org/abs/2605.13907) [S])가 서로 다른 처방을 낸다. 엔트로피, KL(μ‖π), 보상을 한 런에서 함께 보고한 논문이 없다."
+  ]
+ },
+ {
+  "id": "2601.14243",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- QeRL(NVIDIA, ICLR 2026)은 NVFP4+LoRA 롤아웃에서 \"양자화 노이즈가 정책 엔트로피를 올려 탐색을 향상\"한다고 주장하고 IS 보정은 쓰지 않는다 ([2510.11696](https://arxiv.org/abs/2510.11696) [V: README]). FP8-RL([2601.18150](https://arxiv.org/abs/2601.18150) [S]), Jet-RL([2601.14243](https://arxiv.org/abs/2601.14243) [S]), QuRL([2602.13953](https://arxiv.org/abs/2602.13953) [S]), HiFloat4/Rollout-ResQ(\"학습 정밀도를 올리면 FP4 롤아웃이 더 나빠진다\", [2607.26515](https://arxiv.org/abs/2607.26515) [S]), AIS(\"KL이 정책 날카로워짐과 함께 단조 증가, 초기엔 탐색 도움 후기엔 편향\", [2605.13907](https://arxiv.org/abs/2605.13907) [S])가 서로 다른 처방을 낸다. 엔트로피, KL(μ‖π), 보상을 한 런에서 함께 보고한 논문이 없다."
+  ]
+ },
+ {
+  "id": "2602.13953",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- QeRL(NVIDIA, ICLR 2026)은 NVFP4+LoRA 롤아웃에서 \"양자화 노이즈가 정책 엔트로피를 올려 탐색을 향상\"한다고 주장하고 IS 보정은 쓰지 않는다 ([2510.11696](https://arxiv.org/abs/2510.11696) [V: README]). FP8-RL([2601.18150](https://arxiv.org/abs/2601.18150) [S]), Jet-RL([2601.14243](https://arxiv.org/abs/2601.14243) [S]), QuRL([2602.13953](https://arxiv.org/abs/2602.13953) [S]), HiFloat4/Rollout-ResQ(\"학습 정밀도를 올리면 FP4 롤아웃이 더 나빠진다\", [2607.26515](https://arxiv.org/abs/2607.26515) [S]), AIS(\"KL이 정책 날카로워짐과 함께 단조 증가, 초기엔 탐색 도움 후기엔 편향\", [2605.13907](https://arxiv.org/abs/2605.13907) [S])가 서로 다른 처방을 낸다. 엔트로피, KL(μ‖π), 보상을 한 런에서 함께 보고한 논문이 없다."
+  ]
+ },
+ {
+  "id": "2607.26515",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- QeRL(NVIDIA, ICLR 2026)은 NVFP4+LoRA 롤아웃에서 \"양자화 노이즈가 정책 엔트로피를 올려 탐색을 향상\"한다고 주장하고 IS 보정은 쓰지 않는다 ([2510.11696](https://arxiv.org/abs/2510.11696) [V: README]). FP8-RL([2601.18150](https://arxiv.org/abs/2601.18150) [S]), Jet-RL([2601.14243](https://arxiv.org/abs/2601.14243) [S]), QuRL([2602.13953](https://arxiv.org/abs/2602.13953) [S]), HiFloat4/Rollout-ResQ(\"학습 정밀도를 올리면 FP4 롤아웃이 더 나빠진다\", [2607.26515](https://arxiv.org/abs/2607.26515) [S]), AIS(\"KL이 정책 날카로워짐과 함께 단조 증가, 초기엔 탐색 도움 후기엔 편향\", [2605.13907](https://arxiv.org/abs/2605.13907) [S])가 서로 다른 처방을 낸다. 엔트로피, KL(μ‖π), 보상을 한 런에서 함께 보고한 논문이 없다."
+  ]
+ },
+ {
+  "id": "2605.13907",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- QeRL(NVIDIA, ICLR 2026)은 NVFP4+LoRA 롤아웃에서 \"양자화 노이즈가 정책 엔트로피를 올려 탐색을 향상\"한다고 주장하고 IS 보정은 쓰지 않는다 ([2510.11696](https://arxiv.org/abs/2510.11696) [V: README]). FP8-RL([2601.18150](https://arxiv.org/abs/2601.18150) [S]), Jet-RL([2601.14243](https://arxiv.org/abs/2601.14243) [S]), QuRL([2602.13953](https://arxiv.org/abs/2602.13953) [S]), HiFloat4/Rollout-ResQ(\"학습 정밀도를 올리면 FP4 롤아웃이 더 나빠진다\", [2607.26515](https://arxiv.org/abs/2607.26515) [S]), AIS(\"KL이 정책 날카로워짐과 함께 단조 증가, 초기엔 탐색 도움 후기엔 편향\", [2605.13907](https://arxiv.org/abs/2605.13907) [S])가 서로 다른 처방을 낸다. 엔트로피, KL(μ‖π), 보상을 한 런에서 함께 보고한 논문이 없다."
+  ]
+ },
+ {
+  "id": "2606.00206",
+  "tags": [
+   "?",
+   "V"
+  ],
+  "contexts": [
+   "- 양자화 추론 모델에서 토큰 KL이 고엔트로피 위치에 집중된다는 관찰은 Meta FAIR가 보고 ([Lotfi, Kirichenko, Li, Liu 2606.00206](https://arxiv.org/abs/2606.00206) [V]). RLVR의 이득이 20% 고엔트로피 fork 토큰에서 온다는 결과도 있다 ([Beyond the 80/20 Rule 2506.01939, NeurIPS 2025](https://arxiv.org/abs/2506.01939) [V]). 둘을 롤아웃 불일치 보정에 연결한 연구는 없다.",
+   "- Meta FAIR는 양자화-FP 간 토큰 KL이 고엔트로피 위치에서 최대이고 그곳에서 \"wait/but/alternatively\"가 과표집되어 CoT가 길어지며 실패의 최대 52%가 정답을 중간에 얻고도 확정하지 않는 경우라고 보고 ([2606.00206](https://arxiv.org/abs/2606.00206) [V]). 디코딩 측 로짓 페널티만 제안했다.",
+   "R1-Distill-Qwen-7B, Qwen3-8B(thinking). GPTQ/GPTAQ W4/W3 g128에서 캘리브레이션 (a) C4, (b) 자가생성 CoT, (c) CoT + w_t 가중, (d) C4 + w_t 가중(가중 효과를 도메인에서 분리), (e) C4에서 w_t 상위 분위만 추출(엔트로피 층화). AIME24/25, MATH-500, GPQA, LiveCodeBench, CoT 길이, \"정답 미확정\" 비율(2606.00206 프로토콜), 3 seed. 성공 기준: (d)가 (a)와 (b) 사이의 격차 중 절반 이상을 회복하고 CoT 길이 증가를 줄임. (d)≈(a)면 효과는 도메인·어휘이고 가설 기각."
+  ]
+ },
+ {
+  "id": "2506.01939",
+  "tags": [
+   "V"
+  ],
+  "contexts": [
+   "- 양자화 추론 모델에서 토큰 KL이 고엔트로피 위치에 집중된다는 관찰은 Meta FAIR가 보고 ([Lotfi, Kirichenko, Li, Liu 2606.00206](https://arxiv.org/abs/2606.00206) [V]). RLVR의 이득이 20% 고엔트로피 fork 토큰에서 온다는 결과도 있다 ([Beyond the 80/20 Rule 2506.01939, NeurIPS 2025](https://arxiv.org/abs/2506.01939) [V]). 둘을 롤아웃 불일치 보정에 연결한 연구는 없다."
+  ]
+ },
+ {
+  "id": "2512.23075",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "novelty 중상. 분야가 매우 빠르다(2026년에만 5편). 기여의 핵심은 \"두 상반된 서술이 같은 토큰 수준 양에서 나온다\"는 통합과 fork-게이팅 보정이다. 리스크: IcePop, Trust Region Masking([2512.23075](https://arxiv.org/abs/2512.23075) [S]) 등 토큰 마스킹 변형이 이미 유사한 효과를 낼 수 있어, 엔트로피 기준의 차별성을 실험으로 보여야 한다. RL 실험의 분산이 커 3 seed 이상이 필요하다."
+  ]
+ },
+ {
+  "id": "2609.18063",
+  "tags": [
+   "?",
+   "U"
+  ],
+  "contexts": [
+   "- 머지 문제의 유일한 닫힌 해법은 QA-LoRA의 \"zero-point에 접기\"이며 어댑터를 그룹 상수로 제약한다 ([2309.14717, ICLR 2024](https://arxiv.org/abs/2309.14717) [V: repo]). 머지 오차 상한은 없다. \"델타가 4-bit 그룹 스텝 아래라 66–98%가 지워진다\"는 2026 시스템 논문 보고는 이 세션에서 ID를 확인하지 못했다 ([2609.18063] [U]).",
+   "- 2026년 ID 다수가 [S]다. 특히 2606.15007(Nemotron 3 Ultra), 2609.18063(LoRA 머지 소거), 2604.08426(YAKV)은 존재·내용을 PDF로 확인하기 전까지 인용하지 말 것."
+  ]
+ },
+ {
+  "id": "2505.23786",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- Egashira et al.은 preimage box를 계산해 PGD로 FP 가중치를 수리하는 공격을 NF4/INT8/FP4 ([2405.18137, NeurIPS 2024](https://arxiv.org/abs/2405.18137) [V]), GGUF 9종 ([2505.23786, ICML 2025](https://arxiv.org/abs/2505.23786) [S]), outlier 주입으로 AWQ/GPTQ까지 ([2605.15152, ICML 2026](https://arxiv.org/abs/2605.15152) [S]) 확장했다. Gaussian 노이즈 방어는 outlier 주입(Δ 확대)에 깨졌다. dither를 방어로 검토한 문헌은 검색에서 나오지 않았다."
+  ]
+ },
+ {
+  "id": "2605.15152",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- Egashira et al.은 preimage box를 계산해 PGD로 FP 가중치를 수리하는 공격을 NF4/INT8/FP4 ([2405.18137, NeurIPS 2024](https://arxiv.org/abs/2405.18137) [V]), GGUF 9종 ([2505.23786, ICML 2025](https://arxiv.org/abs/2505.23786) [S]), outlier 주입으로 AWQ/GPTQ까지 ([2605.15152, ICML 2026](https://arxiv.org/abs/2605.15152) [S]) 확장했다. Gaussian 노이즈 방어는 outlier 주입(Δ 확대)에 깨졌다. dither를 방어로 검토한 문헌은 검색에서 나오지 않았다."
+  ]
+ },
+ {
+  "id": "2606.29239",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "novelty 높음. 세 문헌(PEFT, unlearning, 보안)이 각자 경험적으로 알던 것을 하나의 스칼라 예측량과 두 설계로 묶고, dither 방어는 증명 가능한 보안 보장을 준다. 리스크: QuantGuard([2606.29239](https://arxiv.org/abs/2606.29239) [S])·QVec([2606.20254](https://arxiv.org/abs/2606.20254) [S]) 등 2026 방어와 비교해야 한다. dither가 저비트에서 정확도를 해치면 방어의 실용성이 제한된다(그 경우 4-bit 이상에서만 유효하다고 범위를 정직하게 적는다)."
+  ]
+ },
+ {
+  "id": "2606.20254",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "novelty 높음. 세 문헌(PEFT, unlearning, 보안)이 각자 경험적으로 알던 것을 하나의 스칼라 예측량과 두 설계로 묶고, dither 방어는 증명 가능한 보안 보장을 준다. 리스크: QuantGuard([2606.29239](https://arxiv.org/abs/2606.29239) [S])·QVec([2606.20254](https://arxiv.org/abs/2606.20254) [S]) 등 2026 방어와 비교해야 한다. dither가 저비트에서 정확도를 해치면 방어의 실용성이 제한된다(그 경우 4-bit 이상에서만 유효하다고 범위를 정직하게 적는다)."
+  ]
+ },
+ {
+  "id": "2504.04823",
+  "tags": [
+   "?"
+  ],
+  "contexts": [
+   "- Liu et al.은 추론 모델 PTQ를 체계 평가하고 자가생성 추론 트레이스를 캘리브레이션에 썼다 ([2504.04823, COLM 2025](https://arxiv.org/abs/2504.04823) [V: repo]). Qwen3-4B INT3에서 WikiText→Math-CoT 캘리브레이션이 28%→65%, CoT 30k→12k 토큰 ([2606.25519](https://arxiv.org/abs/2606.25519) [S]). 도메인 효과는 크지만 \"무엇이\" 효과를 내는지(엔트로피 프로필 vs 어휘·도메인)는 분리되지 않았다."
+  ]
+ },
+ {
+  "id": "2505.07004",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- GuidedQuant는 end-loss 기울기로 출력 채널을 가중하지만(비용: 1×A100 0.3h@7B, 6–7×A100 2.7h@70B) 토큰 믹스는 바꾸지 않는다 ([2505.07004, ICML 2025](https://arxiv.org/abs/2505.07004) [S]). 엔트로피 가중 캘리브레이션 토큰을 다룬 논문은 검색에서 없었다."
+  ]
+ },
+ {
+  "id": "2401.18079",
+  "tags": [
+   "V"
+  ],
+  "contexts": [
+   "- pre-RoPE 지지: KVQuant([2401.18079, NeurIPS 2024](https://arxiv.org/abs/2401.18079) [V]), AnTKV(pre-RoPE 클러스터가 더 조밀, [2506.19505](https://arxiv.org/abs/2506.19505) [S]), TaSQ([2610.03027](https://arxiv.org/abs/2610.03027) [S]). 반대: YAKV는 Hadamard 기반 HIGGS 양자화기에서 pre-RoPE 이득이 없다고 보고 ([2604.08426] [U: 이 세션에서 미확인]); Interface-Aware KV는 Hadamard를 post-RoPE에 적용 ([2609.05764](https://arxiv.org/abs/2609.05764) [S]). 양자화기 의존성을 설명한 논문이 없다."
+  ]
+ },
+ {
+  "id": "2506.19505",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- pre-RoPE 지지: KVQuant([2401.18079, NeurIPS 2024](https://arxiv.org/abs/2401.18079) [V]), AnTKV(pre-RoPE 클러스터가 더 조밀, [2506.19505](https://arxiv.org/abs/2506.19505) [S]), TaSQ([2610.03027](https://arxiv.org/abs/2610.03027) [S]). 반대: YAKV는 Hadamard 기반 HIGGS 양자화기에서 pre-RoPE 이득이 없다고 보고 ([2604.08426] [U: 이 세션에서 미확인]); Interface-Aware KV는 Hadamard를 post-RoPE에 적용 ([2609.05764](https://arxiv.org/abs/2609.05764) [S]). 양자화기 의존성을 설명한 논문이 없다."
+  ]
+ },
+ {
+  "id": "2610.03027",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- pre-RoPE 지지: KVQuant([2401.18079, NeurIPS 2024](https://arxiv.org/abs/2401.18079) [V]), AnTKV(pre-RoPE 클러스터가 더 조밀, [2506.19505](https://arxiv.org/abs/2506.19505) [S]), TaSQ([2610.03027](https://arxiv.org/abs/2610.03027) [S]). 반대: YAKV는 Hadamard 기반 HIGGS 양자화기에서 pre-RoPE 이득이 없다고 보고 ([2604.08426] [U: 이 세션에서 미확인]); Interface-Aware KV는 Hadamard를 post-RoPE에 적용 ([2609.05764](https://arxiv.org/abs/2609.05764) [S]). 양자화기 의존성을 설명한 논문이 없다."
+  ]
+ },
+ {
+  "id": "2604.08426",
+  "tags": [
+   "?",
+   "S"
+  ],
+  "contexts": [
+   "- pre-RoPE 지지: KVQuant([2401.18079, NeurIPS 2024](https://arxiv.org/abs/2401.18079) [V]), AnTKV(pre-RoPE 클러스터가 더 조밀, [2506.19505](https://arxiv.org/abs/2506.19505) [S]), TaSQ([2610.03027](https://arxiv.org/abs/2610.03027) [S]). 반대: YAKV는 Hadamard 기반 HIGGS 양자화기에서 pre-RoPE 이득이 없다고 보고 ([2604.08426] [U: 이 세션에서 미확인]); Interface-Aware KV는 Hadamard를 post-RoPE에 적용 ([2609.05764](https://arxiv.org/abs/2609.05764) [S]). 양자화기 의존성을 설명한 논문이 없다.",
+   "- 2026년 ID 다수가 [S]다. 특히 2606.15007(Nemotron 3 Ultra), 2609.18063(LoRA 머지 소거), 2604.08426(YAKV)은 존재·내용을 PDF로 확인하기 전까지 인용하지 말 것."
+  ]
+ },
+ {
+  "id": "2609.05764",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- pre-RoPE 지지: KVQuant([2401.18079, NeurIPS 2024](https://arxiv.org/abs/2401.18079) [V]), AnTKV(pre-RoPE 클러스터가 더 조밀, [2506.19505](https://arxiv.org/abs/2506.19505) [S]), TaSQ([2610.03027](https://arxiv.org/abs/2610.03027) [S]). 반대: YAKV는 Hadamard 기반 HIGGS 양자화기에서 pre-RoPE 이득이 없다고 보고 ([2604.08426] [U: 이 세션에서 미확인]); Interface-Aware KV는 Hadamard를 post-RoPE에 적용 ([2609.05764](https://arxiv.org/abs/2609.05764) [S]). 양자화기 의존성을 설명한 논문이 없다."
+  ]
+ },
+ {
+  "id": "2507.11273",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 주파수 구조: KV-Latent는 저번호 RoPE 채널이 노이즈 대부분 ([2507.11273](https://arxiv.org/abs/2507.11273) [S]); Block-GTQ는 2-D 주파수 블록별 에너지 비트 할당 ([2606.24033](https://arxiv.org/abs/2606.24033) [S]); Q-ROAR와 \"Rethinking RoPE scaling\"은 YaRN × W4가 파괴적으로 상호작용(NTK/linear는 PPL>100)하고 대역별 스케일로 복구한다고 보고 ([2509.14391](https://arxiv.org/abs/2509.14391), [2510.00028](https://arxiv.org/abs/2510.00028) [S]). 세 현상을 하나의 복소계수 표현에서 분석한 이론은 없다."
+  ]
+ },
+ {
+  "id": "2606.24033",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 주파수 구조: KV-Latent는 저번호 RoPE 채널이 노이즈 대부분 ([2507.11273](https://arxiv.org/abs/2507.11273) [S]); Block-GTQ는 2-D 주파수 블록별 에너지 비트 할당 ([2606.24033](https://arxiv.org/abs/2606.24033) [S]); Q-ROAR와 \"Rethinking RoPE scaling\"은 YaRN × W4가 파괴적으로 상호작용(NTK/linear는 PPL>100)하고 대역별 스케일로 복구한다고 보고 ([2509.14391](https://arxiv.org/abs/2509.14391), [2510.00028](https://arxiv.org/abs/2510.00028) [S]). 세 현상을 하나의 복소계수 표현에서 분석한 이론은 없다."
+  ]
+ },
+ {
+  "id": "2509.14391",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 주파수 구조: KV-Latent는 저번호 RoPE 채널이 노이즈 대부분 ([2507.11273](https://arxiv.org/abs/2507.11273) [S]); Block-GTQ는 2-D 주파수 블록별 에너지 비트 할당 ([2606.24033](https://arxiv.org/abs/2606.24033) [S]); Q-ROAR와 \"Rethinking RoPE scaling\"은 YaRN × W4가 파괴적으로 상호작용(NTK/linear는 PPL>100)하고 대역별 스케일로 복구한다고 보고 ([2509.14391](https://arxiv.org/abs/2509.14391), [2510.00028](https://arxiv.org/abs/2510.00028) [S]). 세 현상을 하나의 복소계수 표현에서 분석한 이론은 없다."
+  ]
+ },
+ {
+  "id": "2510.00028",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- 주파수 구조: KV-Latent는 저번호 RoPE 채널이 노이즈 대부분 ([2507.11273](https://arxiv.org/abs/2507.11273) [S]); Block-GTQ는 2-D 주파수 블록별 에너지 비트 할당 ([2606.24033](https://arxiv.org/abs/2606.24033) [S]); Q-ROAR와 \"Rethinking RoPE scaling\"은 YaRN × W4가 파괴적으로 상호작용(NTK/linear는 PPL>100)하고 대역별 스케일로 복구한다고 보고 ([2509.14391](https://arxiv.org/abs/2509.14391), [2510.00028](https://arxiv.org/abs/2510.00028) [S]). 세 현상을 하나의 복소계수 표현에서 분석한 이론은 없다."
+  ]
+ },
+ {
+  "id": "2602.10718",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- FlashMLA는 V4.1용 FP8 latent(528 B/토큰, e4m3 + 32당 e8m0 스케일)와 FP4(288 B/토큰, e2m1 + 16당 e4m3)를 출시하고 RoPE 64차원도 양자화하지만 정확도 표가 없다 ([FlashMLA repo](https://github.com/deepseek-ai/FlashMLA) [V]). V3.2 포맷은 RoPE 부분을 bf16로 유지했었다 [S]. SnapMLA는 위치 부분을 고정밀로 두라고 주장 ([2602.10718](https://arxiv.org/abs/2602.10718) [S]) — 상반된다."
+  ]
+ },
+ {
+  "id": "2603.04428",
+  "tags": [
+   "S",
+   "V"
+  ],
+  "contexts": [
+   "- MLA 양자화 민감도 데이터는 단일 프리프린트(4-bit KV PPL +2.8% GQA vs +3.0% MLA, [2603.04428](https://arxiv.org/abs/2603.04428) [S])와 KVarN의 GLM-4.7-Flash k4v2 AIME25 동률(0.94× throughput) ([KVarN repo](https://github.com/huawei-csl/KVarN) [V])뿐이다. 스윕 노트: \"weight absorption 하 latent 양자화 이론 없음(W_UK, W_UV, RoPE 분리 가지로의 오차 전파)\". latent에 회전·변환을 적용한 문헌은 검색에서 없었다."
+  ]
+ },
+ {
+  "id": "2608.04074",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "- MHA에서는 query 공분산 가중 변환이 Hadamard를 이긴다는 주장이 있다 (OSCAR [2605.17757](https://arxiv.org/abs/2605.17757) [S], Spend Bits Where Queries Look [2608.04074](https://arxiv.org/abs/2608.04074) [S]). MLA의 latent는 모든 헤드가 공유하므로 가중 행렬 M이 헤드 합으로 정의되는 점이 구조적으로 다르고, 변환을 가중치에 접을 수 있다는 점은 MHA의 online Hadamard(QuaRot)와 달리 디코드 비용이 0이다."
+  ]
+ },
+ {
+  "id": "2606.05688",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "A2. MoE 라우팅 플립 분해. \"양자화 활성화가 top-k 라우팅을 뒤집어 Lipschitz로 묶이지 않는 불연속 오차를 만든다; 마진 분포로 플립 확률 2Φ(−m/σ)를 예측한다\"는 가설은 여전히 유효하지만, 2026년에 VSRAQ([2606.05688](https://arxiv.org/abs/2606.05688) [S]), MoBiE([2604.06798](https://arxiv.org/abs/2604.06798) [S]), EAQuant(라우팅 KL 최소화, [2506.13329](https://arxiv.org/abs/2506.13329) [S]), GEMQ(1.5-bit에서 40% 토큰 재라우팅, [2605.23078](https://arxiv.org/abs/2605.23078) [S])가 측정과 방법을 이미 냈다. 남는 틈은 \"손실의 플립 성분 vs 평활 성분 분해\"와 RL 롤아웃 불일치에서의 MoE 특이성(아이디어 6의 따름정리)이다."
+  ]
+ },
+ {
+  "id": "2604.06798",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "A2. MoE 라우팅 플립 분해. \"양자화 활성화가 top-k 라우팅을 뒤집어 Lipschitz로 묶이지 않는 불연속 오차를 만든다; 마진 분포로 플립 확률 2Φ(−m/σ)를 예측한다\"는 가설은 여전히 유효하지만, 2026년에 VSRAQ([2606.05688](https://arxiv.org/abs/2606.05688) [S]), MoBiE([2604.06798](https://arxiv.org/abs/2604.06798) [S]), EAQuant(라우팅 KL 최소화, [2506.13329](https://arxiv.org/abs/2506.13329) [S]), GEMQ(1.5-bit에서 40% 토큰 재라우팅, [2605.23078](https://arxiv.org/abs/2605.23078) [S])가 측정과 방법을 이미 냈다. 남는 틈은 \"손실의 플립 성분 vs 평활 성분 분해\"와 RL 롤아웃 불일치에서의 MoE 특이성(아이디어 6의 따름정리)이다."
+  ]
+ },
+ {
+  "id": "2506.13329",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "A2. MoE 라우팅 플립 분해. \"양자화 활성화가 top-k 라우팅을 뒤집어 Lipschitz로 묶이지 않는 불연속 오차를 만든다; 마진 분포로 플립 확률 2Φ(−m/σ)를 예측한다\"는 가설은 여전히 유효하지만, 2026년에 VSRAQ([2606.05688](https://arxiv.org/abs/2606.05688) [S]), MoBiE([2604.06798](https://arxiv.org/abs/2604.06798) [S]), EAQuant(라우팅 KL 최소화, [2506.13329](https://arxiv.org/abs/2506.13329) [S]), GEMQ(1.5-bit에서 40% 토큰 재라우팅, [2605.23078](https://arxiv.org/abs/2605.23078) [S])가 측정과 방법을 이미 냈다. 남는 틈은 \"손실의 플립 성분 vs 평활 성분 분해\"와 RL 롤아웃 불일치에서의 MoE 특이성(아이디어 6의 따름정리)이다."
+  ]
+ },
+ {
+  "id": "2605.23078",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "A2. MoE 라우팅 플립 분해. \"양자화 활성화가 top-k 라우팅을 뒤집어 Lipschitz로 묶이지 않는 불연속 오차를 만든다; 마진 분포로 플립 확률 2Φ(−m/σ)를 예측한다\"는 가설은 여전히 유효하지만, 2026년에 VSRAQ([2606.05688](https://arxiv.org/abs/2606.05688) [S]), MoBiE([2604.06798](https://arxiv.org/abs/2604.06798) [S]), EAQuant(라우팅 KL 최소화, [2506.13329](https://arxiv.org/abs/2506.13329) [S]), GEMQ(1.5-bit에서 40% 토큰 재라우팅, [2605.23078](https://arxiv.org/abs/2605.23078) [S])가 측정과 방법을 이미 냈다. 남는 틈은 \"손실의 플립 성분 vs 평활 성분 분해\"와 RL 롤아웃 불일치에서의 MoE 특이성(아이디어 6의 따름정리)이다."
+  ]
+ },
+ {
+  "id": "2502.09720",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "A4. 회전된 KV의 격자/TCQ 부호화로 TurboQuant 상수 2.7 → 1에 접근. 이론 노트가 지적한 대로 2.7 ≈ √3π/2(Panter–Dite 스칼라 패널티)이므로 E8(0.65 dB)/TCQ(~1 dB) 부호화가 상수를 줄일 것이라는 예측은 정확히 계산 가능하다. 그러나 NestQuant([2502.09720](https://arxiv.org/abs/2502.09720) [S])가 E8 격자를 W4A4KV4에 이미 썼고 CQ/CommVQ가 VQ를 썼으므로 방법 novelty가 낮다. 2-bit value가 병목(cos-sim 0.94)이라는 커뮤니티 측정과 결합하면 실용적이긴 하다."
+  ]
+ },
+ {
+  "id": "2608.25188",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "A5. 변환–포맷 공동 설계(Great Inversion의 4개 공개문제, [2608.25188](https://arxiv.org/abs/2608.25188) [S]). 단일 저자 프리프린트가 문제를 이미 정식화했고 저자가 후속을 낼 가능성이 높아 직접 경쟁이 된다."
+  ]
+ },
+ {
+  "id": "2605.20315",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "A6. prefill/decode 비대칭 이론. \"prefill 오차는 문맥 표현의 평균화된 노이즈로, decode 오차는 샘플링 분포에 직접 들어가 분기 과정으로 복합된다\"는 모델. Mix-Quant·Disaggregated Quantization([2605.20315](https://arxiv.org/abs/2605.20315), [2609.26333](https://arxiv.org/abs/2609.26333) [S])의 경험적 결론에 이론을 붙이는 것이지만 실험 설계가 모호해 내렸다."
+  ]
+ },
+ {
+  "id": "2609.26333",
+  "tags": [
+   "S"
+  ],
+  "contexts": [
+   "A6. prefill/decode 비대칭 이론. \"prefill 오차는 문맥 표현의 평균화된 노이즈로, decode 오차는 샘플링 분포에 직접 들어가 분기 과정으로 복합된다\"는 모델. Mix-Quant·Disaggregated Quantization([2605.20315](https://arxiv.org/abs/2605.20315), [2609.26333](https://arxiv.org/abs/2609.26333) [S])의 경험적 결론에 이론을 붙이는 것이지만 실험 설계가 모호해 내렸다."
+  ]
+ }
+]
