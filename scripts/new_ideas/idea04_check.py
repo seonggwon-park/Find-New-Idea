@@ -22,8 +22,8 @@ import numpy as np
 
 E2M1 = np.array([0.0, 0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0])
 B = 16
-T, M, K = 4096, 32, 32
-TRIALS = 6
+T, M, K = 2048, 32, 32
+TRIALS = 8
 
 
 def e4m3_ceil(v):
@@ -100,10 +100,17 @@ def run(akind, xkind, seed):
         "sort_dy": np.argsort(-ndy),
         "sort_lev": np.argsort(-(ndy * nx)),
     }
+    # 'lead': each of the T/16 largest-||dY_t|| tokens leads its own block (it sets the
+    # scale and sits on the grid max), followers are the remaining tokens in descending
+    # order, so large leaders get the largest followers (contiguous after the leader).
+    srt = perms["sort_dy"]
+    nb = T // B
+    lead, fol = srt[:nb], srt[nb:].reshape(nb, B - 1)
+    perms["lead"] = np.concatenate([lead[:, None], fol], axis=1).reshape(-1)
     signs = rng.choice([-1.0, 1.0], size=T)
     out = {}
     for mode in ("sr", "rtn"):
-        for arm in ("id", "rht16", "sort_dy", "sort_lev", "sortlev+rht"):
+        for arm in ("id", "rht16", "sort_dy", "sort_lev", "sortlev+rht", "lead"):
             p = perms["sort_lev"] if arm == "sortlev+rht" else perms.get(arm, perms["id"])
             D, Xp = dY[p], X[p]
             if "rht" in arm:
@@ -119,25 +126,31 @@ def run(akind, xkind, seed):
 
 
 def main():
-    arms = ("id", "rht16", "sort_dy", "sort_lev", "sortlev+rht")
+    arms = ("id", "rht16", "sort_dy", "sort_lev", "sortlev+rht", "lead")
     akinds = ["0.75", "1.0", "1.5", "2.0", "3.0", "5.0", "flat", "mix"]
     for xkind in ("plain", "massive"):
+        cache = {ak: [run(ak, xkind, 1000 * s + 7) for s in range(TRIALS)] for ak in akinds}
         print(f"=== X token scales: {xkind} (T={T}, M=K={M}, block={B}, trials={TRIALS}) ===")
-        print("relative Wgrad MSE  ||What-W||^2/||W||^2  (mean over trials); ratio = arm/rht16")
+        print("relative Wgrad MSE ||What-W||^2/||W||^2 (mean over trials); ratio = arm/rht16;"
+              " se% = std.err of the per-trial log-ratio sort_lev/rht16, in %")
         for mode in ("sr", "rtn"):
             print(f"-- {mode.upper()} --")
-            print("a_t tail    " + "  ".join(f"{a:>12s}" for a in arms) + "   sort_lev/rht  sl+rht/rht")
+            print("a_t tail    " + "  ".join(f"{a:>12s}" for a in arms)
+                  + "  sort_dy/rht  sort_lev/rht  sl+rht/rht  lead/rht   se%")
             for ak in akinds:
-                res = [run(ak, xkind, 1000 * s + 7) for s in range(TRIALS)]
+                res = cache[ak]
                 m = {a: np.mean([r[(mode, a)] for r in res]) for a in arms}
+                lr = np.log([r[(mode, "sort_lev")] / r[(mode, "rht16")] for r in res])
+                se = 100 * lr.std(ddof=1) / np.sqrt(len(lr))
                 print(f"{ak:>9s}   " + "  ".join(f"{m[a]:12.3e}" for a in arms)
-                      + f"   {m['sort_lev']/m['rht16']:11.3f}  {m['sortlev+rht']/m['rht16']:9.3f}")
+                      + f"  {m['sort_dy']/m['rht16']:11.3f}  {m['sort_lev']/m['rht16']:12.3f}"
+                      + f"  {m['sortlev+rht']/m['rht16']:10.3f}  {m['lead']/m['rht16']:8.3f}  {se:5.1f}")
         print("-- RTN zero fraction of dY entries in bottom-50% tokens (by ||dY_t||) --")
-        print("a_t tail    " + "  ".join(f"{a:>10s}" for a in ("id", "sort_dy", "sort_lev")))
+        print("a_t tail    " + "  ".join(f"{a:>10s}" for a in ("id", "sort_dy", "sort_lev", "lead")))
         for ak in akinds:
-            res = [run(ak, xkind, 1000 * s + 7) for s in range(2)]
+            res = cache[ak]
             print(f"{ak:>9s}   " + "  ".join(
-                f"{np.mean([r[('zero', a)] for r in res]):10.4f}" for a in ("id", "sort_dy", "sort_lev")))
+                f"{np.mean([r[('zero', a)] for r in res]):10.4f}" for a in ("id", "sort_dy", "sort_lev", "lead")))
         print()
 
 

@@ -17,6 +17,9 @@ Quantizers: INT4 AbsMax (levels +-7) and FP4 E2M1 AbsMax (max -> 6), exact
 Sweep rho = share of a cross-group low-rank factor in Sigma.
 Secondary: W4A4 deployed output error with activations RTN-quantized (no feedback).
 """
+import os
+for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+    os.environ.setdefault(_v, "1")  # avoid BLAS oversubscription stalls
 import numpy as np
 
 d, G, dout = 32, 16, 256

@@ -17,6 +17,7 @@ Checks
  F. Damping: near-singular synthetic covariances (m tokens < n), GPTQ 1% damping.
 All numbers are synthetic. Seeds fixed.
 """
+import time
 import numpy as np
 from math import lgamma
 
@@ -119,6 +120,7 @@ def quip_sup(eps):
 
 
 def main():
+    t0 = time.time()
     rng = np.random.default_rng(0)
     print("=== A. Eq.33 vs exact Haar MC (two-point, n=200, 30 rotations) ===")
     n = 200
@@ -128,15 +130,17 @@ def main():
         m, s = gap_haar(lam, rng, 30)
         print(f"eps={eps:.0e} f={f:.2f}: Eq33={g33:.3f}  HaarMC={m:.3f} +- {s:.3f}  diff={m - g33:+.3f}")
 
+    print(f"[t={time.time()-t0:.0f}s]")
     print("\n=== B. sup over two-point spectra vs sharpened asymptotic ===")
-    print("eps    | Eq33 n=2000 sup (f*) | n->inf limit sup (f*) | asym formula | limit - (1/2log2(1/eps) - log2 ln(1/eps)) | 1-f* vs 2/ln(1/eps)")
+    print("eps    | Eq33 n=1000 sup (f*) | leading-order eps->0 limit sup (f*) | asym formula | limit - (1/2log2(1/eps) - log2 ln(1/eps)) | 1-f* vs 2/ln(1/eps)")
     for eps in [1e-2, 1e-3, 1e-4, 1e-6, 1e-8]:
-        s2000, f2000 = sup_two_point(2000, eps)
+        s2000, f2000 = sup_two_point(1000, eps)
         sl, fl = limit_rot(eps)
         resid = sl - (0.5 * np.log2(1 / eps) - np.log2(np.log(1 / eps)))
         print(f"{eps:.0e} | {s2000:.3f} ({f2000:.3f}) | {sl:.3f} ({fl:.3f}) | {asym_rot(eps):.3f} | {resid:+.3f} | {1 - fl:.4f} vs {2 / np.log(1 / eps):.4f}")
     print(f"limiting residual constant 1/2 log2(2/e^2) = {0.5 * np.log2(2 / np.e ** 2):.4f}")
 
+    print(f"[t={time.time()-t0:.0f}s]")
     print("\n=== C. rotation dividend: Specht (PCA basis) worst gap - rotated worst gap ===")
     for eps in [1e-3, 1e-4, 1e-6, 1e-8, 1e-12, 1e-20]:
         sp = specht_gap(eps)
@@ -150,7 +154,7 @@ def main():
         qs = quip_sup(eps)
         sl, _ = limit_rot(eps)
         print(f"eps={eps:.0e}: sup QuIP(mu=1)={qs:.3f}  sup rot={sl:.3f}  sup-difference={qs - sl:.3f}")
-    print(f"asymptotic sup-difference (2-2log2 e) - (1/2-log2 e) = {(2 - 2 * LOG2E) - (0.5 - LOG2E):.4f}")
+    print(f"asymptotic sup-difference (1-log2 e) - (1/2-log2 e) = {(1 - LOG2E) - (0.5 - LOG2E):.4f} (both maximized at 1-f = 2/ln(1/eps))")
     # pointwise at the rotated worst spectrum
     for eps in [1e-4, 1e-8]:
         _, fl = limit_rot(eps)
@@ -182,6 +186,7 @@ def main():
     print(f"max over {cnt} random spectra of log2(AM(D_Eq33)/AM(sqrt l)^2) = {worst:+.4f} (<=0 means mu-free Lemma 2 holds for Eq.33)")
     print(f"max over small-n subset of HaarMC gap - QuIP(mu=1) functional  = {worst_h:+.4f} bit")
 
+    print(f"[t={time.time()-t0:.0f}s]")
     print("\n=== E. two-point extremality: local search over general spectra, n=40, eps=1e-4 ===")
     n, eps = 40, 1e-4
     best2, f2 = sup_two_point(n, eps)
@@ -201,27 +206,31 @@ def main():
         frac_end = np.mean((x < np.log(eps) + 1e-6) | (x > -1e-6))
     print(f"best two-point Eq33 gap = {best2:.4f} (f={f2:.2f}); best local-search gap = {best_ls:.4f}; last run fraction at endpoints = {frac_end:.2f}")
 
+    print(f"[t={time.time()-t0:.0f}s]")
     print("\n=== F. damping on near-singular synthetic covariances (n=1024) ===")
     n = 1024
     rng4 = np.random.default_rng(3)
-    scales = rng4.lognormal(0, 1.0, n)
-    scales[:4] *= 60.0  # massive channels
-    for m in [128, 512, 2048, 16384]:
-        X = rng4.standard_normal((m, n)) * scales
-        lam = np.clip(np.linalg.eigvalsh(X.T @ X / m), 0, None)
-        mean = lam.mean()
-        for pd in [0.01, 0.1]:
-            d = pd * mean
-            lam_d = lam + d
-            eps_eff = lam_d.min() / lam_d.max()
-            g = gap_eq33(lam_d)
-            print(f"m={m:5d} damp={pd:.2f}: lmax/mean={lam.max() / mean:7.1f}  eps_eff={eps_eff:.1e}  rot gap (Eq33)={g:.3f}  worst-case cap={limit_rot(eps_eff)[0]:.2f}  QuIP(mu=1)={quip_functional(lam_d):.3f}")
-    # one exact Haar check on the most singular case
+    base = rng4.lognormal(0, 1.0, n)
+    for massive in [True, False]:
+        scales = base.copy()
+        if massive:
+            scales[:4] *= 60.0  # massive channels
+        for m in [128, 512, 16384]:
+            X = rng4.standard_normal((m, n)) * scales
+            lam = np.clip(np.linalg.eigvalsh(X.T @ X / m), 0, None)
+            mean = lam.mean()
+            for pd in [1e-4, 1e-2, 1e-1]:
+                lam_d = lam + pd * mean
+                eps_eff = lam_d.min() / lam_d.max()
+                g = gap_eq33(lam_d)
+                print(f"massive={int(massive)} m={m:5d} damp={pd:.0e}*mean: lmax/mean={lam.max() / mean:6.1f} eps_eff={eps_eff:.1e} rot gap(Eq33)={g:.3f} cap={limit_rot(eps_eff)[0]:.2f} QuIP(mu=1)={quip_functional(lam_d):.3f}")
+    scales = base.copy()
     X = rng4.standard_normal((128, n)) * scales
-    lam = np.clip(np.linalg.eigvalsh(X.T @ X / 128), 0, None) + 0.01 * np.clip(np.linalg.eigvalsh(X.T @ X / 128), 0, None).mean()
+    lam = np.clip(np.linalg.eigvalsh(X.T @ X / 128), 0, None)
+    lam = lam + 0.01 * lam.mean()
     m_, s_ = gap_haar(lam, rng4, 3)
-    print(f"exact Haar MC, m=128 damp=0.01: {m_:.3f} +- {s_:.3f}  vs Eq33 {gap_eq33(lam):.3f}")
-
+    print(f"exact Haar MC, no massive, m=128, damp=1e-2*mean: {m_:.3f} +- {s_:.3f}  vs Eq33 {gap_eq33(lam):.3f}")
+    print(f"[t={time.time()-t0:.0f}s]")
 
 if __name__ == "__main__":
     main()
