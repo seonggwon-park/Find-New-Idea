@@ -17,7 +17,7 @@
 
 | # | 아이디어 | 단계 | novelty | 단독 main-track 가능성 | 판정 실험 비용 | 수치 확인 스크립트 |
 |---|---|---|---|---|---|---|
-| 1 | V 캐시 토큰 축 noise shaping (0바이트 오차 피드백) | 서빙(KV) | 3/5 | 낮음–중간(약 20–30%) | 약 3 GPU·일 | `scripts/new_ideas/idea01_check.py` |
+| 1 | V 캐시 토큰 축 noise shaping (0바이트 오차 피드백) **— 판정 실험에서 기각(부록 C)** | 서빙(KV) | 3/5 | 기각(축소 대리 실험) | 약 3 GPU·일 | `scripts/new_ideas/idea01_check.py` |
 | 2 | DP replica 간 공유 시드 SR의 평균화 붕괴 진단 | 학습(FP4 backward, DP) | 2/5 | 낮음(<10%) | Step 0 1시간, 이후 1–2 GPU·주(조건부) | `scripts/new_ideas/idea02_check.py` |
 | 3 | Haar 회전 GPTQ와 WaterSIC 최악 간극의 정확한 점근식 | PTQ 이론 | 3/5 | 낮음(ISIT·TMLR 또는 한 절) | CPU + 약 2 GPU·일 | `scripts/new_ideas/idea03_check.py` |
 | 4 | FP4 RL Wgrad의 토큰 축 공유 순열 | 학습(FP4 RL backward) | 2.5/5 | 낮음(10–15%) | 약 1–1.5 GPU·주 | `scripts/new_ideas/idea04_check.py` |
@@ -28,7 +28,7 @@
 | 9 | PTQ 층간 오차 상쇄의 부분공간 분해와 오차 셰이핑 | PTQ·분석 | 2/5 | 낮음(10–15%) | 약 1.5 GPU·주 | `scripts/new_ideas/idea09_check.py` |
 | 10 | 검색 헤드별 EVT 꼬리로 사용 가능 문맥 길이 예측과 길이 목표 비트 배분 | 서빙(KV·장문맥) | 2/5 | 낮음(15–20%) | 약 1–1.5 GPU·주 | `scripts/new_ideas/idea10_check.py` |
 
-권장 순서: 비용 대비 판정력이 가장 큰 것은 아이디어 1(실제 어텐션 행의 R·β·h 측정만으로 4 GPU·시간 안에 kill gate 통과 여부가 갈린다), 아이디어 3(CPU와 2 GPU·일, 이론 노트로 완결 가능), 아이디어 6(4 GPU·일)이다. 아이디어 2는 Step 0(2-GPU, 1시간)으로 Megatron/TE 기본 설정의 SR 난수 공유 여부만 먼저 확인할 가치가 있다.
+권장 순서: 아이디어 1은 2026-10-11 축소 대리 실험에서 기각됐다(부록 C). 남은 것 중 비용 대비 판정력이 큰 것은 아이디어 3(CPU와 2 GPU·일, 이론 노트로 완결 가능), 아이디어 6(4 GPU·일)이다. 아이디어 2는 Step 0(2-GPU, 1시간)으로 Megatron/TE 기본 설정의 SR 난수 공유 여부만 먼저 확인할 가치가 있다.
 
 ### 0.3 방법
 
@@ -1543,3 +1543,16 @@ prompt x와 섭동 draw ξ에 대해 p′=p_x(ξ), p̄_x=E_ξ p′라 두고 D(p
 python3 -I scripts/new_ideas/idea01_check.py   # … idea10_check.py, 각 19–65초 (CPU, numpy)
 ```
 BLAS 스레드 과다 구독으로 멈추는 환경에서는 `OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1`을 지정한다.
+
+## 부록 C. 아이디어 1 판정 실험 결과 (2026-10-11)
+
+축소 대리 실험(Qwen2.5-0.5B, CPU, 4096토큰 창, 2-bit V, 보정 창 4개·평가 창 12개)에서 **기각**됐다. 전체 결과와 원자료는 `research_notes/new_ideas/experiments/idea01_result.md`, 스크립트는 `scripts/new_ideas/idea01_killgate.py`다.
+
+| 판정 기준 | 실측 | 결과 |
+|---|---|---|
+| 질량 가중 평균 h·R > 0.7이면 기각 | 3.64 | 기각 |
+| log(예측)과 log(실측)의 상관 < 0.5면 기각 | 0.46 | 기각 |
+| 선택 SD-2가 RTN-2→RTN-3 격차를 25% 미만 닫으면 기각 | 9.2% (창별 4–18%) | 기각 |
+
+원인은 두 가지다. 실제 어텐션 행의 R 중앙값이 1.50으로 매끄럽지 않고(이득 조건 R < 1/h), 실제 V의 토큰 간 스케일 차이 때문에 h가 2.33으로 합성 실험 값(1.18)의 두 배다. 출력 오차 총합은 SD를 모든 헤드에 쓰면 41% 늘고, 보정으로 고른 헤드에만 쓰면 1.3% 준다(RTN-3은 86% 감소). 이 대리 실험은 보고서가 정한 8B·32K 조건과 다르지만, 실패 원인이 어텐션 패턴의 성질이어서 규모가 커져도 뒤집힐 근거는 약하다.
+
