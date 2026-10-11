@@ -6,7 +6,7 @@
 
 ## 0. 요약과 판정표
 
-2026-10-11 개정: arXiv 전문 대조와 적대적 novelty 판정(0.4절) 결과, 초안의 10개 아이디어 중 9개가 2026년 논문에 핵심을 선점당했다. 아래 표는 개정 판정이며, 각 행의 "남는 기여"만이 연구 대상으로 의미가 있다.
+2026-10-11 개정: arXiv 전문 대조와 적대적 novelty 판정(0.4절) 결과, 초안의 10개 아이디어 중 9개가 선행 논문(대부분 2026년, 아이디어 9는 2024–2025년)에 핵심을 선점당했다. 아래 표는 개정 판정이며, 각 행의 "남는 기여"만이 연구 대상으로 의미가 있다.
 
 | # | 아이디어(개정 제목 요약) | 파이프라인 단계 | 판정 실험 비용 | novelty(개정) | main-track(개정) |
 |---|---|---|---|---|---|
@@ -40,10 +40,10 @@
 
 ### 0.2 스윕에서 확인된, 아이디어의 공통 토대가 되는 사실
 
-1. 엄밀한 이론은 거의 전부 "층별 MSE proxy" 위에 있다(QuIP 비간섭성 정리, GPTQ=Babai nearest-plane, 격자/TCQ 율-왜곡). proxy에서 end-to-end 손실로 가는 다리는 (a) HIGGS linearity theorem — 국소 최소점 주변 2차 Taylor 전개에서 나온 E[PPL(Ŵ)] ≈ PPL(W*) + Σ_l α_l t_l² (t_l² = 층별 상대 Frobenius 오차, 3–8bit에서만 검증, OPT-125M에서만 가정 검증) — 와 (b) Lipschitz 활성화 가정 하의 다층 확장뿐이며, Provable PTQ는 층별 ℓ₂/ℓ∞ 상한만 주고 PPL 보장은 "열린 문제"라고 명시한다 ([QuIP 2307.13304, NeurIPS 2023](https://arxiv.org/abs/2307.13304) [V], [GPTQ=Babai 2507.18553, ICLR 2026](https://arxiv.org/abs/2507.18553) [V], [Provable PTQ 2508.04853](https://arxiv.org/abs/2508.04853) [V], [HIGGS 2411.17525, NAACL 2025](https://arxiv.org/abs/2411.17525) [V]). 초안의 "KL≈¼‖δ‖²"는 HIGGS에 없는 식이라 삭제했다.
-2. 회전은 ℓ₂ 노름, Hessian 스펙트럼, 토큰 간 동적 범위를 바꾸지 못한다(직교성의 결과). SpinQuant는 무작위 회전 100회 시행 간 zero-shot 평균 최대 13점(W4A4 LLaMA-2 7B), 무작위 Hadamard 간에도 최대 6점 편차를 보고한다(Sec 2.2, Fig. 4; 논문은 "Haar"라는 표현을 쓰지 않는다). 이를 "비간섭성 보장이 손실을 통제하지 못한다"고 읽는 것은 이 보고서의 해석이다 ([SpinQuant 2405.16406, ICLR 2025](https://arxiv.org/abs/2405.16406) [V]).
+1. 엄밀한 이론은 거의 전부 "층별 MSE proxy" 위에 있다(QuIP 비간섭성 정리, GPTQ=Babai nearest-plane, 격자/TCQ 율-왜곡). proxy에서 end-to-end 손실로 가는 다리는 (a) HIGGS linearity theorem — 국소 최소점 주변 2차 Taylor 전개에서 나온 E[PPL(Ŵ)] ≈ PPL(W*) + Σ_l α_l t_l² (t_l² = 층별 상대 Frobenius 오차, 3–8bit에서만 검증, OPT-125M에서만 가정 검증) — 와 (b) Lipschitz 활성화 가정 하의 다층 확장뿐이며, Provable PTQ는 층별 ℓ₂/ℓ∞ 상한만 주고 PPL 보장은 "열린 문제"라고 명시한다 ([QuIP 2307.13304, NeurIPS 2023](https://arxiv.org/abs/2307.13304) [V], [GPTQ=Babai 2507.18553, ICLR 2026](https://arxiv.org/abs/2507.18553) [V], [Provable PTQ 2508.04853](https://arxiv.org/abs/2508.04853) [V], [HIGGS 2411.17525, NAACL 2025](https://arxiv.org/abs/2411.17525) [V]).
+2. 회전은 ℓ₂ 노름, Hessian 스펙트럼, 토큰 간 동적 범위를 바꾸지 못한다(직교성의 결과). SpinQuant는 무작위 회전 100회 시행 간 zero-shot 평균 최대 13점(W4A4 LLaMA-2 7B), 무작위 Hadamard 간에도 최대 6점 편차를 보고한다(Sec 2.2, Fig. 4). 이를 "비간섭성 보장이 손실을 통제하지 못한다"고 읽는 것은 이 보고서의 해석이다 ([SpinQuant 2405.16406, ICLR 2025](https://arxiv.org/abs/2405.16406) [V]).
 3. 정밀도 스케일링 법칙(Kumar et al. [2411.04330, ICLR 2025](https://arxiv.org/abs/2411.04330) [V], Ouyang et al. [2411.17691, ACL 2025](https://arxiv.org/abs/2411.17691) [V])은 적합식이다. 기작은 Kumar 부록 H의 sharpness/edge-of-stability 추측(저자 스스로 "speculative")과 Ouyang Sec 4의 "말기 가중치 변동폭이 작아 양자화가 그 범위를 벗어난다"는 직관뿐이며 검증은 없다. Kumar 부록 G는 cosine vs warmup+linear decay를 30M 모델에서 비교해 토큰/파라미터 비에 따른 열화가 스케줄과 무관하게 지속된다고 보고한다. 2025–26에 "LR이 감쇠하면 손실과 양자화 오차가 분리된다"는 반론이 나왔고, 이 논문은 peak-LR·WSD vs cosine·weight decay·LAWA 개입 실험과 Hessian trace·sharpness 측정까지 이미 수행했다 ([Catalan-Tatjer et al. 2510.06213, ICLR 2026](https://arxiv.org/abs/2510.06213) [V]).
-4. 서빙 측 KV 양자화 이론은 초안 작성 시 추정량 수준(QJL 비편향 내적, TurboQuant Beta 주변분포)에 머문다고 보았으나 이는 틀렸다. 2026년에 어텐션 출력 오차를 직접 다루는 정리가 여럿 나왔다: WitCert([2607.28699](https://arxiv.org/abs/2607.28699) [V], Theorem 1: |ε_t| ≤ c_t이면 TV(p, p̃) ≤ ½(A² − 1), A = E_p̃[e^c]; 부호 없는 최악 경우 상한), 2차 softmax 응답을 포함한 변환 부호화 분석([2608.14191](https://arxiv.org/abs/2608.14191) [V] App. A), 1차 Jacobian 민감도([2608.20988](https://arxiv.org/abs/2608.20988) [V]). 부호를 가진 편향과 분산 항을 함께 다룬 것은 2605.26266의 보정식뿐이다(아이디어 1). QJL 잔차는 커뮤니티에서 "softmax가 분산을 증폭해 품질을 해친다"고 보고되어 vLLM 구현에서 제외됐다 ([vLLM TurboQuant docs](https://docs.vllm.ai/en/latest/api/vllm/model_executor/layers/quantization/turboquant/) [V]; 문서 주석이지 벤치마크는 아니다).
+4. 서빙 측 KV 양자화 이론은 초안 작성 시 추정량 수준(QJL 비편향 내적, TurboQuant Beta 주변분포)에 머문다고 보았으나 이는 틀렸다. 2026년에 어텐션 출력 오차를 직접 다루는 정리가 여럿 나왔다: WitCert([2607.28699](https://arxiv.org/abs/2607.28699) [V], Theorem 1: |ε_t| ≤ c_t이면 TV(p, p̃) ≤ ½(A² − 1), A = E_p̃[e^c]; 부호 없는 최악 경우 상한), 2차 softmax 응답을 포함한 변환 부호화 분석([2608.14191](https://arxiv.org/abs/2608.14191) [V] App. A), 1차 Jacobian 민감도([2608.20988](https://arxiv.org/abs/2608.20988) [V]). 이번 스윕에서 읽은 논문 중 부호를 가진 편향과 분산 항을 함께 다룬 것은 2605.26266의 보정식이었다(아이디어 1). 이 범위 밖의 문헌은 확인하지 않았다. QJL 잔차는 커뮤니티에서 "softmax가 분산을 증폭해 품질을 해친다"고 보고되어 vLLM 구현에서 제외됐다 ([vLLM TurboQuant docs](https://docs.vllm.ai/en/latest/api/vllm/model_executor/layers/quantization/turboquant/) [V]; 문서 주석이지 벤치마크는 아니다).
 5. 후학습 측에서는 "preimage box"(한 양자화 모델의 FP 원상)가 공격(Egashira et al. [2405.18137](https://arxiv.org/abs/2405.18137) [V]), unlearning 역전([2410.16454, ICLR 2025](https://arxiv.org/abs/2410.16454) [V]; 형식적 정리는 없고 Sec 5의 Δ_int4 ≫ Δ_int8 간격 비교가 전부), LoRA 머지 실패([QA-LoRA 2309.14717](https://arxiv.org/abs/2309.14717) [V]; QA-LoRA 자체의 머지는 그룹 상수를 zero-point에 흡수하므로 구성상 정확하고, 상한이 없는 것은 비제약 LoRA+PTQ 머지)를 관통하지만 누구도 통합 정리로 쓰지 않았다.
 
 ### 0.3 arXiv 전문 대조로 수정한 항목
@@ -53,7 +53,7 @@
 | arXiv id | 초안의 서술 | 전문 대조 결과 | 반영 |
 |---|---|---|---|
 | 2604.08976 | GPTQ 4-bit가 ECE를 악화시킨다는 측정 | 그 문장은 이 논문의 related work이며 원출처는 Proskurina et al. 2405.00632 (Findings of NAACL 2024); 2604.08976 자체는 GGUF Q5_K_M vs f16 비교 | 2405.00632로 재귀속 |
-| 2608.01078 | 최신 모델은 캘리브레이션 데이터에 덜 민감 | 원출처는 Paglieri et al. 2405.20835 (ICML 2024 WS); 2608.01078의 자체 결과는 반대(통상 캘리브레이션으로 ternary PTQ가 수학·코딩에서 붕괴, 자가 생성 추론 흔적으로 복구) | 2405.20835로 재귀속, 2608.01078은 아이디어 8의 근거로 이동 |
+| 2608.01078 | 최신 모델은 캘리브레이션 데이터에 덜 민감 | 원출처는 Paglieri et al. 2405.20835 (ICML 2024 WS); 2608.01078의 자체 결과는 반대(통상 캘리브레이션으로 ternary PTQ가 수학·코딩에서 붕괴, 자가 생성 추론 흔적으로 복구) | 2405.20835로 재귀속, 2608.01078은 아이디어 5·8에서 자체 결과(자가 생성 추론 흔적에 의한 복구)로만 인용 |
 | 2411.17525 | "KL≈¼‖δ‖²", 1차 근사 | 식이 논문에 없음; 2차 Taylor에서 나온 층별 상대 MSE 선형식 | 0.2절 수정 |
 | 2405.16406 | "Haar 회전 간 13점" | "Haar" 없음; 무작위 회전 100회 최대 13점, Hadamard 간 6점 | 0.2절 수정 |
 | 2503.22879, 2508.10370 | "SSM 상태 양자화 학술 논문 0건" | Quamba2는 캐시된 SSM 상태를 정적 per-group 8-bit로 양자화(App. E); eMamba는 INT24 계산/INT17 저장 고정소수점 상태를 FPGA/ASIC에 구현 | 아이디어 2의 공백을 "피드백 없는 open-loop 정적 양자화만 존재"로 재정의 |
@@ -82,7 +82,7 @@
 | 4 | 중상 | 중간 | 2601.22101 eq.(18), 2510.10693 Thm VI.3(η 무관 양자화 바닥), 2505.19115 §4.1 |
 | 5 | 중 | 낮음 | 2609.31560 Thm 3.1·eq.(35)(OPTQ 일반화 상한, 표본수 의존 λ) |
 | 6 | 중상 | 낮음 | 2609.32444 Lemma 3.1·cap 1+λ(1−p_t); 2607.22186 Eq. 19·Prop. 1–2 |
-| 7 | 높음 | 낮음(dither 방어만 중간) | 2609.21834 Model 2·Corollary 6(교차확률 η|u|/s, 비편향 이동) |
+| 7 | 높음 | 낮음(dither 방어만 중간) | 2609.21834 Model 2·Corollary 6(교차확률 η\|u\|/s, 비편향 이동) |
 | 8 | 중 | 낮음–중 | 2505.07004 Sec. 3.2(토큰 가중 Hessian); 2605.08755(softmax-Fisher, 부분공간 정렬 설명) |
 | 9 | 중 | 낮음 | 2501.19392 App. D, 2401.18079 App. P Table 20(양자화기별 pre/post-RoPE 부호 반전) |
 | 10 | 중상 | 낮음 | 2609.36760(native MLA latent 변환·kernel); 2608.04074 Thm 1·eq.(38)(M^{1/2} 가중 KLT) |
@@ -98,12 +98,12 @@
 |---|---|---|---|---|
 | h00 backward 경로 편향이 NVIDIA–Chmiel 충돌을 설명 | 4 | 2 / 2 / 4 | 기존 아이디어에 흡수 | 충돌 해소 논문은 없음. 단 Chmiel 이득은 +40B 토큰·LR 재가열과 교란되고 편향원은 1D 가중치 전치 불일치 |
 | h01 p-의존 완전 보정 −σ²(½ − p̂) | 1 | 2 / 4 / 4 | 흡수 | 대수는 맞음. 출력 MSE·NLL 개선은 일반적으로 기대 어려움 |
-| h02 회전된 평균 차감 k_m − R_m μ | 9 | 3 / 4 / 5 | 흡수 | 선행 없음(가장 높은 점수). 상수 평균 차감은 비대칭 양자화기에서 no-op |
+| h02 회전된 평균 차감 k_m − R_m μ | 9 | 3 / 4 / 5 | 흡수 | 쿼리 10회에서 선행 미발견(가장 높은 점수). 상수 평균 차감은 비대칭 양자화기에서 no-op |
 | h03 동일 비트 EF 회계 | 2 | 1 / 5 / 5 | 흡수 | nested 격자에서 EF ≡ INT(b+b_r)는 정리이며 2607.23390·2609.39185가 이미 서술 |
 | h04 forget 활성 가중 SNR_x | 7 | 2 / 3 / 4 | 흡수 | 등방 통계량과 공선적. 복귀 경로는 base 노이즈 × 곡률일 가능성 |
 | h05 MXFP8 floor 규칙의 축소 편향 | 3 | 2 / 3 / 2 | 흡수 | 제안 gain이 MXFP4 값. MXFP8 편향은 조건부(블록 17–19%) |
 | h06 노름 상관 이분산 | 1 | 2 / 4 / 5 | 흡수 | 2605.26266 l.586–589, App. E가 대부분 서술 |
-| h07 iid EVT 블록 모델의 설명력 | 3 | 2 / 3 / 5 | 흡수 | CPU 검증에서 KBBQ 격차를 2 dB 이상 놓침(반증 쪽 증거) |
+| h07 iid EVT 블록 모델의 설명력 | 3 | 2 / 3 / 5 | 흡수 | KBBQ 격차 재현 여부가 미기재 스케일 인코딩에 좌우됨(E4M3 스케일이면 2 dB 이상 미달, UE8M0 올림이면 Laplace·t5에서 0.1 dB 이내). cos≈−0.66은 재현 |
 | h08 erasure와 시간 보정 이득 | 2 | 1 / 3 / 4 | 흡수 | 원 예측(GDN에서 이득 ≈ 0)은 LeapQuant 2609.38166이 반박 |
 | h09 도메인 효과 3요인 분해 | 8 | 2 / 2 / 4 | 흡수 | LAQuant 한계 절이 이미 제안. on-policy arm 필수 |
 
@@ -140,7 +140,7 @@
   - 반례: NF4에서 ECE 방향이 혼재하고 적합 T = 1.25–1.67이다([2608.03854](https://arxiv.org/abs/2608.03854) [S]).
   - [ReSET 2606.13233](https://arxiv.org/abs/2606.13233) [V]: 전체 모델 W4A4에서 엔트로피가 양방향으로 이동한다. LM head를 분리하지 않았고 보정도 없다.
   - [2609.11716](https://arxiv.org/abs/2609.11716) [V] Thm 3: Δlog p_k = Δz_k − E_pΔz − ½Var_p(Δz). 결정론적이다.
-  - [2609.31291](https://arxiv.org/abs/2609.31291) [V]: 행 평균 이동으로 KL을 73–93% 줄인다.
+  - [2609.31291](https://arxiv.org/abs/2609.31291) [V]: 행 평균 이동으로 기준 오차가 큰 헤드의 test KL을 73–93% 줄인다(W4; 기준 오차가 작은 헤드는 변화가 작다).
   - 노이즈 기댓값 보정은 없다.
 
 ### 수학
@@ -264,7 +264,7 @@ Gaussian 블록의 최대값 밀도 × E2M1 구간 적분으로 기대 MSE를 �
   - MXAttention Theorem 1: E8M0 최적 경계 7.25는 log2 M의 분포와 무관하다. Table 1은 OCP=e_floor(8)로 공식화한다 ([2607.24377](https://arxiv.org/abs/2607.24377) [V]).
   - Egiazarian et al.도 Sec. 3.1에 해석적 MSE 경계(Lemma 1–2)를 둔다. 회전 후 kurtosis는 0.02–0.05다 ([2509.23202, ICLR 2026](https://arxiv.org/abs/2509.23202) [V]).
 - **경험적 보고(정정).**
-  - Meta(ICML 2026, PTQ): OAS+MBS로 MXFP4를 61.25에서 66.50으로 올린다. NVFP4는 67.02다 ([2603.08713](https://arxiv.org/abs/2603.08713) [V]).
+  - Meta(ICML 2026, PTQ): OAS+MBS로 Llama-3.1-8B-Instruct 평균 정확도를 MXFP4 61.25에서 66.50으로 올린다. NVFP4는 67.02다 ([2603.08713](https://arxiv.org/abs/2603.08713) [V]).
   - NVIDIA의 "MXFP4 2.5% vs NVFP4 1.5%"는 8B/1T에서 BF16 대비 **학습 손실** 상대오차다(Fig. 6a). 텐서 오차가 아니다 ([2509.25149](https://arxiv.org/abs/2509.25149) [V]).
   - Mishra et al.: OCP v1(⌊log2 amax⌋−emax, 사실상 내림)은 843M(Fig. 5)에서 "training issues"로 조기 중단됐다(v1 초록은 "divergence"). ceil+E4M3는 8B/15T에서 val-ppl 차이 <0.50%다(fake-quant). MXFP8 결과이며, 원인은 저자가 "We hypothesize"라고 쓴다 ([2506.08027](https://arxiv.org/abs/2506.08027) [V]).
 - **포맷 제안(정정).**
@@ -290,7 +290,7 @@ Gaussian 블록의 최대값 밀도 × E2M1 구간 적분으로 기대 MSE를 �
 - **Shrinkage 분해**: UFP4 구간 편향은 전역 균일 밀도에서 합이 0이다(0.25·(−0.125)+0.75·(−0.125)+1.5·(−0.25)+1·(+0.5)=0). 순 편향은 밀도 기울기, deadzone, 클리핑에서 나온다. Gaussian B=16의 구간별 오차는 q=2 −0.112, q=4 −0.164, q=6 +0.545다. 순 1−α≈0.0033은 거의 상쇄된 잔차이고 부록 C의 −0.66%와 같은 계산이다(판정 재계산은 −0.70%, α 0.9959 [S]).
 - **판정식**: 중점 경계는 MSE 최적이므로 편향은 그 대가다. (L·bias)²가 추가 분산보다 크면 비편향 라운딩이 유리하다. RMSNorm이 균일 감쇠를 상쇄하는지는 미확인이다 [S].
 
-증명 가능한 것: e_floor/e_ceil 계열의 MSE·gain·최대 원소 편향을 1차원 적분으로 정확히 계산하는 것. H2: cos≈−0.66은 올림 조건 γ≥1에서 오는 B 무관 상수로 유도된다. 추측: H1(편향 누적이 불안정의 원인), RHT 후 Gaussian성. OffQ는 Hadamard가 고노름 토큰을 토큰별 상수 오프셋으로 바꿀 뿐임을 보인다(PTQ) ([OffQ 2606.07116](https://arxiv.org/abs/2606.07116) [V]).
+증명 가능한 것: e_floor/e_ceil 계열의 MSE·gain·최대 원소 편향을 1차원 적분으로 정확히 계산하는 것. H2: cos≈−0.66은 올림 조건 γ≥1에서 오는 (U, y) 2차원 적분(반닫힌형)으로 계산된다. CPU 재현은 Gaussian B=32에서 −0.669이며, B≥16에서만 근사 상수이고 분포에 약 0.03, B<16에서 약 0.06 의존한다(`hypotheses/h07.md`). 추측: H1(편향 누적이 불안정의 원인), RHT 후 Gaussian성. OffQ는 Hadamard가 고노름 토큰을 토큰별 상수 오프셋으로 바꿀 뿐임을 보인다(PTQ) ([OffQ 2606.07116](https://arxiv.org/abs/2606.07116) [V]).
 
 ### 판정 실험(CPU 수치 + 수일)
 1. Fasoli 공개 코드로 즉시 재현한다. 그 위에 OCP/ceil/UOS/E4M3/UE5M3 × B × Gaussian·Laplace·t3의 MSE, gain, 최대 원소 편향, 클리핑 비율, cos(e_scale,e_grid)를 계산한다.
@@ -299,9 +299,9 @@ Gaussian 블록의 최대값 밀도 × E2M1 구간 적분으로 기대 MSE를 �
 실패 기준: (c)도 불안정하면 H1을 기각한다. 실 데이터의 gain 순위가 해석식과 다르면 Gaussian 틀은 무용하다.
 
 ### 평가
-novelty 낮음~중하. 핵심인 닫힌 형태 기대 왜곡은 Fasoli(2601.19026)가 출판했다. Soloveychik, Chen, Li, MXAttention이 나머지를 나눠 선점했다. 남는 기여는 편향 축의 확장이다. 메인트랙 가치는 실험 3이 H1을 확인하는지에 달렸다. 확인되지 않으면 부록 A로 내리는 것이 맞다.
+novelty 낮음–중하. 핵심인 닫힌 형태 기대 왜곡은 Fasoli(2601.19026)가 출판했다. Soloveychik, Chen, Li, MXAttention이 나머지를 나눠 선점했다. 남는 기여는 편향 축의 확장이다. 메인트랙 가치는 실험 3이 H1을 확인하는지에 달렸다. 확인되지 않으면 부록 A로 내리는 것이 맞다.
 
-**스윕 후 추가 가설 채점(2026-10-11, `hypotheses/h05.md`, `h07.md`).** MXFP8 OCP floor 규칙의 불안정이 MSE가 아니라 블록 최대의 축소 편향 때문이라는 가설(h05, n2/f2)은 위 (H1)과 같은 내용이다. 채점 에이전트는 두 가지 오류를 찾았다. 제안된 고정 Bussgang gain(0.990/0.980/0.988/0.996)은 MXFP4(E2M1) 값이며 MXFP8에서는 OCP 0.9972 대 ceil 0.9993으로 보정 폭이 0.28%에 불과하다. 실제 편향은 정규화 블록 최대가 (448, 512)에 드는 약 17–19% 블록에서만 생기는 조건부 편향(평균 −1.23%, 최대 −12.5%)이라 상수 gain으로는 보정되지 않는다. iid 블록 EVT 모델의 설명력(h07)은 CPU 검증에서 KBBQ의 FP8 per-tensor 대 FP4 block-16 SNR 격차를 10.7–11.1 dB로 예측해 목표 13.24 dB를 2 dB 이상 놓쳤다. 즉 iid 모델은 이 수치를 설명하지 못하며, 블록 간 상관 또는 토큰 수준 이상치가 필요하다. 이는 초안의 "Gaussian 모델 1.20 대 실측 1.67" 불일치와 같은 방향의 증거다.
+**스윕 후 추가 가설 채점(2026-10-11, `hypotheses/h05.md`, `h07.md`).** MXFP8 OCP floor 규칙의 불안정이 MSE가 아니라 블록 최대의 축소 편향 때문이라는 가설(h05, n2/f2)은 위 (H1)과 같은 내용이다. 채점 에이전트는 두 가지 오류를 찾았다. 제안된 고정 Bussgang gain(0.990/0.980/0.988/0.996)은 MXFP4(E2M1) 값이며 MXFP8에서는 OCP 0.9972 대 ceil 0.9993으로 보정 폭이 0.28%에 불과하다. 실제 편향은 정규화 블록 최대가 (448, 512)에 드는 약 17–19% 블록에서만 생기는 조건부 편향(평균 −1.23%, 최대 −12.5%)이라 상수 gain으로는 보정되지 않는다. iid 블록 EVT 모델의 설명력(h07)은 KBBQ가 block-16 스케일 인코딩을 밝히지 않아 판정이 갈린다. CPU 검증에서 FP8 per-tensor 대 FP4 block-16 SNR 격차는 E4M3(NVFP4형) 스케일이면 10.7–11.1 dB로 목표 13.24 dB를 2 dB 이상 놓치고, UE8M0 올림 스케일이면 12.6–14.0 dB로 Laplace·t5에서 0.1 dB 이내다. 따라서 이 수치는 예측이 아니라 스케일 인코딩 판별 시험이며, NVFP4형 스케일이었다면 iid 모델 밖의 요인(채널 이상치 구조, KBBQ κ 정규화의 비승법성)이 필요하다. 같은 검증에서 cos(e_scale, e_grid)는 Gaussian B=32에서 −0.669로 재현됐다.
 
 ---
 
@@ -680,29 +680,33 @@ novelty 낮음(부분 선점: QuantMLA 2609.36760 + NOVA-KV 2608.04074). 가중 
 
 ## 부록 A. 검토 후 순위에서 내린 후보와 이유
 
-A1. 과학습 취약성의 기작(토큰 수 vs LR 스케줄·sharpness). 가설은 "Kumar/Ouyang의 D^γ 효과는 상당 부분 cosine decay의 말기 곡률 상승"이었고 QiD ≈ ΣΔ_g²tr(H_g)/24 분해와 재평탄화 개입을 제안할 계획이었다. 그러나 Catalan-Tatjer, Ajroldi, Geiping([2510.06213, ICLR 2026](https://arxiv.org/abs/2510.06213) [S])이 32B/15T 궤적에서 "LR decay 후 손실과 양자화 오차가 분리된다"고 이미 보고했다. 남는 기여는 Δ² vs tr(H) 분해와 개입 실험이며, 아이디어 4에 흡수했다.
+A1. 과학습 취약성의 기작(토큰 수 vs LR 스케줄·sharpness). 가설은 "Kumar/Ouyang의 D^γ 효과는 상당 부분 cosine decay의 말기 곡률 상승"이었고 QiD ≈ ΣΔ_g²tr(H_g)/24 분해와 재평탄화 개입을 제안할 계획이었다. 그러나 Catalan-Tatjer, Ajroldi, Geiping([2510.06213, ICLR 2026](https://arxiv.org/abs/2510.06213) [V])이 최대 32B(OLMo2) / 15T(Apertus-8B) 궤적에서 "LR decay 후 손실과 양자화 오차가 분리된다"고 이미 보고했고, peak-LR·WSD vs cosine·weight decay·LAWA 개입과 Hessian trace·sharpness 측정도 수행했다. 남는 것은 층별 Δ_g²tr(H_g)/24 분해의 정량 검정과 저정밀 학습으로의 확장뿐이며, 아이디어 4에 흡수했다.
 
-A2. MoE 라우팅 플립 분해. "양자화 활성화가 top-k 라우팅을 뒤집어 Lipschitz로 묶이지 않는 불연속 오차를 만든다; 마진 분포로 플립 확률 2Φ(−m/σ)를 예측한다"는 가설은 여전히 유효하지만, 2026년에 VSRAQ([2606.05688](https://arxiv.org/abs/2606.05688) [S]), MoBiE([2604.06798](https://arxiv.org/abs/2604.06798) [S]), EAQuant(라우팅 KL 최소화, [2506.13329](https://arxiv.org/abs/2506.13329) [S]), GEMQ(1.5-bit에서 40% 토큰 재라우팅, [2605.23078](https://arxiv.org/abs/2605.23078) [S])가 측정과 방법을 이미 냈다. 남는 틈은 "손실의 플립 성분 vs 평활 성분 분해"와 RL 롤아웃 불일치에서의 MoE 특이성(아이디어 6의 따름정리)이다.
+A2. MoE 라우팅 플립 분해. "양자화 활성화가 top-k 라우팅을 뒤집어 Lipschitz로 묶이지 않는 불연속 오차를 만든다; 마진 분포로 플립 확률 2Φ(−m/σ)를 예측한다"는 가설은 여전히 유효하지만, 2026년에 VSRAQ([2606.05688](https://arxiv.org/abs/2606.05688) [V]), EAQuant(라우팅 KL 최소화, [2506.13329](https://arxiv.org/abs/2506.13329) [V]), GEMQ(1.5-bit에서 40% 토큰 재라우팅, [2605.23078](https://arxiv.org/abs/2605.23078) [V])가 측정과 방법을 이미 냈다. MoBiE([2604.06798](https://arxiv.org/abs/2604.06798) [U])는 저자가 철회했으므로(2026-04-20) 선행 근거로 세지 않는다. 남는 틈은 "손실의 플립 성분 vs 평활 성분 분해"와 RL 롤아웃 불일치에서의 MoE 특이성(아이디어 6의 따름정리)이다.
 
 A3. 추측 디코딩 수락률 법칙. 1 − α = E[TV(p,q)] ≤ √(KL/2), KL ≈ ½δᵀJδ, δ ∝ 2^{−b} 이므로 log₂(1 − α) ≈ −b + const(드래프트 비트당 거부율 절반)라는 예측과 최적 self-draft 정밀도의 닫힌 해. 검색에서 비트폭-수락률 모델은 없었다(QSpec, QuantSpec, ML-SpecQD는 수치만 보고 [S]). 유도가 전문가에게 자명해 novelty가 낮고 상수가 모델별로 달라 법칙이 느슨할 위험이 있어 내렸다. 저비용 workshop 논문으로는 적합하다.
 
-A4. 회전된 KV의 격자/TCQ 부호화로 TurboQuant 상수 2.7 → 1에 접근. 이론 노트가 지적한 대로 2.7 ≈ √3π/2(Panter–Dite 스칼라 패널티)이므로 E8(0.65 dB)/TCQ(~1 dB) 부호화가 상수를 줄일 것이라는 예측은 정확히 계산 가능하다. 그러나 NestQuant([2502.09720](https://arxiv.org/abs/2502.09720) [S])가 E8 격자를 W4A4KV4에 이미 썼고 CQ/CommVQ가 VQ를 썼으므로 방법 novelty가 낮다. 2-bit value가 병목(cos-sim 0.94)이라는 커뮤니티 측정과 결합하면 실용적이긴 하다.
+A4. 회전된 KV의 격자/TCQ 부호화로 TurboQuant 상수 2.7 → 1에 접근. 이론 노트가 지적한 대로 2.7 ≈ √3π/2(Panter–Dite 스칼라 패널티)이므로 E8(0.65 dB)/TCQ(~1 dB) 부호화가 상수를 줄일 것이라는 예측은 정확히 계산 가능하다. 그러나 NestQuant([2502.09720](https://arxiv.org/abs/2502.09720) [V])가 E8 격자를 W4A4KV4에 이미 썼고 CQ/CommVQ가 VQ를 썼으므로 방법 novelty가 낮다. 2-bit value가 병목(cos-sim 0.94)이라는 커뮤니티 측정과 결합하면 실용적이긴 하다.
 
-A5. 변환–포맷 공동 설계(Great Inversion의 4개 공개문제, [2608.25188](https://arxiv.org/abs/2608.25188) [S]). 단일 저자 프리프린트가 문제를 이미 정식화했고 저자가 후속을 낼 가능성이 높아 직접 경쟁이 된다.
+A5. 변환–포맷 공동 설계(Great Inversion의 4개 공개문제, [2608.25188](https://arxiv.org/abs/2608.25188) [V]). 단일 저자 프리프린트가 문제를 이미 정식화했다. 저자가 후속을 내면 직접 경쟁이 된다(추측).
 
-A6. prefill/decode 비대칭 이론. "prefill 오차는 문맥 표현의 평균화된 노이즈로, decode 오차는 샘플링 분포에 직접 들어가 분기 과정으로 복합된다"는 모델. Mix-Quant·Disaggregated Quantization([2605.20315](https://arxiv.org/abs/2605.20315), [2609.26333](https://arxiv.org/abs/2609.26333) [S])의 경험적 결론에 이론을 붙이는 것이지만 실험 설계가 모호해 내렸다.
+A6. prefill/decode 비대칭 이론. "prefill 오차는 문맥 표현의 평균화된 노이즈로, decode 오차는 샘플링 분포에 직접 들어가 분기 과정으로 복합된다"는 모델. Mix-Quant([2605.20315](https://arxiv.org/abs/2605.20315) [V]) Sec. 3.2가 이 기작을 정성적으로 거의 그대로 서술했으므로 남는 것은 정식화뿐이다. 게다가 그 ablation(Table 3)에서 prefill만 양자화(P4D16)와 decode만 양자화(P16D4)의 차이는 1.6점(Qwen3-8B 38.32 vs 36.74)에 그치고, 두 단계를 모두 NVFP4로 두면 6.8점(40.42→33.59)이 떨어진다. 주된 효과는 깨끗한 비대칭이 아니라 초가법적 열화이며, 이론은 이를 설명해야 한다. Disaggregated Quantization([2609.26333](https://arxiv.org/abs/2609.26333) [V])은 하드웨어 비용 특화 논문이라 오차 전파 모델이 없다. 실험 설계가 모호해 내렸다.
+
+A7. 아이디어 2 원안(재귀 상태 ΣΔ/EF 양자화). deadband·RTN/SR 성장·EF carry가 2609.39185, 2607.23390, 2609.04490에 있고, nested 격자에서 EF ≡ INT(b+b_r)이 정리라 "ΣΔ + 4-bit 잔차의 메모리 이득"이 무너진다. 평가 절의 권고대로 원안은 여기로 내리며, 본문 절은 잔여 가설(nested가 깨지는 write rule, Γ_out 기반 시간 보정, KV + 상태 공동 예산)의 기록으로만 남긴다.
+
+A8. 아이디어 7 원안(양자화 셀 정리 통합). 정리 7.1은 SR 항등식이고 교차 확률·비편향 이동은 2609.21834 Model 2·Corollary 6에, 설계 1은 LoTA-QAF·MANSU에 있으며, 머지 영역의 "통합"은 on-grid base의 결정론적 편향 때문에 틀렸다. 평가 절의 권고대로 원안은 여기로 내리며, 본문 절은 비밀 시드 subtractive dither 방어(선행 미발견)를 중심으로 한 보안 논문 후보로만 남긴다.
 
 ## 부록 B. 공통 리스크와 평가 위생
 
 - 평가 지표: 4-bit 이상에서 perplexity는 방법 간 차이를 보이지 못하고(OmniQuant 표에서 Llama-2-7B W4 g128 방법 간 0.03–0.05 PPL), 추론은 perplexity와 분리된다(GPTQ v1/v2: ARC-c 동일, GSM8K 0.40 vs 0.76, [GPTQv2 README](https://raw.githubusercontent.com/Intelligent-Computing-Lab-Yale/GPTQv2/main/README.md) [V]). 모든 아이디어의 판정 실험은 KL·토큰 수준 지표·추론 벤치마크를 함께 보고해야 한다.
-- 캘리브레이션 표본 분산(아이디어 5)이 0.3 PPL 수준의 "SOTA 증분"을 만들 수 있으므로 seed와 CI 없는 비교는 무의미하다.
+- 캘리브레이션 표본 선택만으로 결과가 크게 흔들린다(아이디어 5: GPTQ zero-shot 범위 0.9–1.6%, 2311.09755; 표본 수 증가에 코드 정확도 57.67%→34.03%, 2510.10618). seed와 CI 없는 소폭 "SOTA 증분" 비교는 무의미하다.
 - fake-quant로 끝나는 서빙 논문은 시스템 학회에서 약하다. 아이디어 1, 2, 10은 최소한 하나의 실제 커널 측정을 붙여야 한다.
-- 2026년 ID 다수가 [S]다. 특히 2606.15007(Nemotron 3 Ultra), 2609.18063(LoRA 머지 소거), 2604.08426(YAKV)은 존재·내용을 PDF로 확인하기 전까지 인용하지 말 것.
+- 2차 스윕 후에도 [S]로 남은 2026년 ID(전문 대조 84건 밖의 보조 인용)는 인용 전에 PDF로 확인해야 한다. 초안에서 보류했던 2606.15007(Nemotron 3 Ultra), 2609.18063(LoRA 머지 소거), 2604.08426(YAKV)은 전문 대조로 확인되어 [V]로 올렸다.
 
 ## 부록 C. 이 보고서에서 수치로 검증한 유도
 
 스크립트는 세션 스크래치패드에서 실행했다(numpy 몬테카를로).
 - 아이디어 1: 이분산 2차 편향식, n=64, σ_j² ∈ U[0, 0.3], 4×10⁵ 표본: 예측-측정 상관 0.9996, 최대 상대 오차 3.9%. 동분산: 상관 0.9995, 평균 맵 엔트로피 3.0635 → 3.0681.
-- 아이디어 3: E2M1 블록 MSE/σ²: NVFP4형(16, E4M3) 0.0092, MXFP4 올림(32, UE8M0) 0.0133, MXFP4 내림 0.0414, 정확 스케일 B=16 0.0089. E2M1 shrinkage: E[|Q(x)|−|x|]/E|x| = −0.66%.
+- 아이디어 3: E2M1 블록 MSE/σ²: NVFP4형(16, E4M3) 0.0092, MXFP4 올림(32, UE8M0) 0.0133, MXFP4 내림 0.0414(항상 클리핑하는 순수 floor(log2(M/6)) 규칙이며 OCP v1 규칙은 0.0132), 정확 스케일 B=16 0.0089. E2M1 shrinkage: E[|Q(x)|−|x|]/E|x| = −0.66%.
 - 아이디어 2: a=0.999, T=2×10⁴, Δ=0.02, 입력 노이즈 10⁻³: max|d_t|/Δ = RTN 3.36, SR 12.92, ΣΔ(정확) 0.58, ΣΔ(4-bit 잔차) 2.03(최종 0.05).
 - 아이디어 7: Δ=1, d ~ N(0, 0.05²), 2×10⁶: E[D̃]/d 기울기 1.006, Var 0.0402(예측 0.0374), SNR 0.0664(예측 0.0669).
