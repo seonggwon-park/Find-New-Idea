@@ -118,6 +118,7 @@ def main():
     ap.add_argument("--seqlen", type=int, default=1024)
     ap.add_argument("--starved", type=int, default=512)
     ap.add_argument("--out", default=None)
+    ap.add_argument("--conds", default="full,starved")
     a = ap.parse_args()
     t0 = time.time()
     tok = AutoTokenizer.from_pretrained(a.model)
@@ -131,7 +132,7 @@ def main():
     starved = [ids[starts[0]:starts[0] + a.starved].unsqueeze(0)]
     deltas = [1e-4, 1e-2, 1e-1]
     rows = []
-    for cond, wins in (("full", full), ("starved", starved)):
+    for cond, wins in [(c, {"full": full, "starved": starved}[c]) for c in a.conds.split(",")]:
         t1 = time.time()
         Hs, ntok = collect(model, wins)
         print(f"[{cond}] collected {len(Hs)} Hessians from {ntok} tokens in {time.time()-t1:.0f}s", flush=True)
@@ -140,11 +141,12 @@ def main():
             for r in analyze(H, deltas, rng):
                 r.update(cond=cond, name=name, layer=int(name.split(".")[0]), kind=name.split(".")[1], tokens=ntok)
                 rows.append(r)
+            Hs[name] = None
             print(f"  {cond} {name} n={H.shape[0]} " + " ".join(
                 f"d={r['delta']:.0e}:meas={r['gap_rot_meas']:.3f}/eq33={r['gap_eq33']:.3f}/nat={r['gap_native']:.3f}/pca={r['gap_pca']:.3f}/eps={r['eps_eff']:.1e}"
                 for r in rows[-3:]) + f" ({time.time()-t2:.0f}s)", flush=True)
     summ = {}
-    for cond in ("full", "starved"):
+    for cond in a.conds.split(","):
         for dl in deltas:
             R = [r for r in rows if r["cond"] == cond and r["delta"] == dl]
             m = np.array([r["gap_rot_meas"] for r in R]); p = np.array([r["gap_eq33"] for r in R])
