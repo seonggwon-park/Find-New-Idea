@@ -23,23 +23,49 @@
 
 ### 0.1 문헌 스윕 방법과 한계
 
-6개 영역(사전학습, 가중치 PTQ, 활성화·KV·어텐션 서빙, 후학습·RL·추론·안전, 이론, 인접 분야)을 병렬로 스윕했다. 노트 원문은 `research_notes/LLM 양자화 연구 아이디어 10선/01~06_*.md`에 있고, 총 약 450KB, 인용 약 400건이다.
+두 단계로 진행했다.
 
-반드시 알아야 할 한계: 이 세션의 네트워크 정책이 arXiv, OpenReview, ACL Anthology, NeurIPS/PMLR 전문 호스트를 차단했다. 따라서 모든 정리 서술과 수치는 (a) 검색엔진 요약, (b) 공식 GitHub README, (c) 고전 교과서 기억에서 재구성됐다. 아래에서 인용 뒤의 표기는 다음을 뜻한다.
+1. **1차(스니펫 스윕, 2026-10-10 오전)**: 6개 영역(사전학습, 가중치 PTQ, 활성화·KV·어텐션 서빙, 후학습·RL·추론·안전, 이론, 인접 분야)을 병렬로 스윕했다. 노트 원문은 `research_notes/LLM 양자화 연구 아이디어 10선/01~06_*.md`(약 450KB, 인용 약 400건). 이 단계에서는 네트워크 정책이 arXiv 등 전문 호스트를 차단해 검색엔진 요약·공식 README·교과서 기억으로 재구성했다.
+2. **2차(arXiv 전문 대조 스윕, 2026-10-10 오후~10-11)**: 호스트 차단을 해제한 뒤 `scripts/arxiv_fetch.py`/`arxiv_search.py`로 전문(PDF→텍스트)을 받아, 보고서가 인용한 arXiv ID 84건 전부를 인용 문장 단위로 대조했다(`research_notes/arxiv_sweep/verify/`). 결과: 확인 42건, 부분 확인(수치·귀속·표현 수정 필요) 40건, 오귀속 2건, 존재하지 않는 ID 0건. 이어서 정리·수치를 원문에서 추출(`theorems/`, 40편), 아이디어별 선행 연구 탐색(`discover/`, 키워드·인용 이웃·반대 증거 3각도)과 적대적 novelty 판정(`judge/`), 2026년 6–10월 신규 이론 스캔(`recent/`)을 수행했다. 수정 내역은 0.3절에 정리했다.
 
-- [V] 이 세션에서 1차 자료(공식 README/문서) 또는 검색 결과에서 해당 주장이 직접 확인됨
+인용 뒤의 표기는 다음을 뜻한다.
+
+- [V] arXiv 전문(또는 공식 문서)에서 해당 주장과 수치를 직접 확인함
 - [S] 초록/스니펫 수준에서만 확인됨(수치는 저자 자기보고)
-- [U] arXiv ID 또는 존재 자체가 이 세션에서 확인되지 않음(기억 또는 2차 요약)
+- [U] 이 세션에서 ID 또는 존재가 확인되지 않음
 
-논문으로 쓰기 전에 [S]와 [U]는 원문 PDF 대조가 필수다. 특히 2026년 ID(26xx.xxxxx)는 다수가 [S]다.
+2차 스윕 뒤에도 [S]로 남은 항목은 전문 대조 대상(84건)에 들지 않은 보조 인용이다. 전문 대조에서 "부분 확인"으로 판정된 항목은 본문을 수정한 뒤 [V]로 올렸다.
 
 ### 0.2 스윕에서 확인된, 아이디어의 공통 토대가 되는 사실
 
-1. 엄밀한 이론은 거의 전부 "층별 MSE proxy" 위에 있다(QuIP 비간섭성 정리, GPTQ=Babai nearest-plane, 격자/TCQ 율-왜곡). proxy에서 end-to-end 손실로 가는 다리는 1차(HIGGS linearity theorem, KL≈¼‖δ‖²)이거나 느슨한 Lipschitz 상한뿐이다 ([QuIP 2307.13304](https://arxiv.org/abs/2307.13304) [V], [GPTQ=Babai 2507.18553](https://arxiv.org/abs/2507.18553) [S], [Provable PTQ 2508.04853](https://arxiv.org/abs/2508.04853) [S], [HIGGS 2411.17525](https://arxiv.org/abs/2411.17525) [S]).
-2. 회전은 ℓ₂ 노름, Hessian 스펙트럼, 토큰 간 동적 범위를 바꾸지 못한다(직교성의 결과). SpinQuant가 보고한 "Haar 회전 간 13점 편차"는 비간섭성 보장이 손실을 통제하지 못한다는 직접 증거다 ([SpinQuant 2405.16406](https://arxiv.org/abs/2405.16406) [V]).
-3. 정밀도 스케일링 법칙(Kumar et al. [2411.04330](https://arxiv.org/abs/2411.04330) [S], Ouyang et al. [2411.17691](https://arxiv.org/abs/2411.17691) [S])은 적합식이며 기작이 없다. 2025–26에 "LR이 감쇠하면 손실과 양자화 오차가 분리된다"는 반론이 나왔다 ([Catalan-Tatjer et al. 2510.06213, ICLR 2026](https://arxiv.org/abs/2510.06213) [S]).
-4. 서빙 측 KV 양자화 이론은 추정량 수준(QJL 비편향 내적, TurboQuant Beta 주변분포)에 머물고, 어텐션 출력이나 토큰 수준 오차를 다루는 정리가 없다. QJL 잔차는 커뮤니티에서 "softmax가 분산을 증폭해 품질을 해친다"고 보고되어 vLLM 구현에서 제외됐다 ([vLLM TurboQuant docs](https://docs.vllm.ai/en/latest/api/vllm/model_executor/layers/quantization/turboquant/) [V]).
-5. 후학습 측에서는 "preimage box"(한 양자화 모델의 FP 원상)가 공격(Egashira et al. [2405.18137](https://arxiv.org/abs/2405.18137) [V]), unlearning 역전([2410.16454](https://arxiv.org/abs/2410.16454) [S]), LoRA 머지 실패([QA-LoRA 2309.14717](https://arxiv.org/abs/2309.14717) [V])를 관통하지만 누구도 통합 정리로 쓰지 않았다.
+1. 엄밀한 이론은 거의 전부 "층별 MSE proxy" 위에 있다(QuIP 비간섭성 정리, GPTQ=Babai nearest-plane, 격자/TCQ 율-왜곡). proxy에서 end-to-end 손실로 가는 다리는 (a) HIGGS linearity theorem — 국소 최소점 주변 2차 Taylor 전개에서 나온 E[PPL(Ŵ)] ≈ PPL(W*) + Σ_l α_l t_l² (t_l² = 층별 상대 Frobenius 오차, 3–8bit에서만 검증, OPT-125M에서만 가정 검증) — 와 (b) Lipschitz 활성화 가정 하의 다층 확장뿐이며, Provable PTQ는 층별 ℓ₂/ℓ∞ 상한만 주고 PPL 보장은 "열린 문제"라고 명시한다 ([QuIP 2307.13304, NeurIPS 2023](https://arxiv.org/abs/2307.13304) [V], [GPTQ=Babai 2507.18553, ICLR 2026](https://arxiv.org/abs/2507.18553) [V], [Provable PTQ 2508.04853](https://arxiv.org/abs/2508.04853) [V], [HIGGS 2411.17525, NAACL 2025](https://arxiv.org/abs/2411.17525) [V]). 초안의 "KL≈¼‖δ‖²"는 HIGGS에 없는 식이라 삭제했다.
+2. 회전은 ℓ₂ 노름, Hessian 스펙트럼, 토큰 간 동적 범위를 바꾸지 못한다(직교성의 결과). SpinQuant는 무작위 회전 100회 시행 간 zero-shot 평균 최대 13점(W4A4 LLaMA-2 7B), 무작위 Hadamard 간에도 최대 6점 편차를 보고한다(Sec 2.2, Fig. 4; 논문은 "Haar"라는 표현을 쓰지 않는다). 이를 "비간섭성 보장이 손실을 통제하지 못한다"고 읽는 것은 이 보고서의 해석이다 ([SpinQuant 2405.16406, ICLR 2025](https://arxiv.org/abs/2405.16406) [V]).
+3. 정밀도 스케일링 법칙(Kumar et al. [2411.04330, ICLR 2025](https://arxiv.org/abs/2411.04330) [V], Ouyang et al. [2411.17691, ACL 2025](https://arxiv.org/abs/2411.17691) [V])은 적합식이다. 기작은 Kumar 부록 H의 sharpness/edge-of-stability 추측(저자 스스로 "speculative")과 Ouyang Sec 4의 "말기 가중치 변동폭이 작아 양자화가 그 범위를 벗어난다"는 직관뿐이며 검증은 없다. Kumar 부록 G는 cosine vs warmup+linear decay를 30M 모델에서 비교해 토큰/파라미터 비에 따른 열화가 스케줄과 무관하게 지속된다고 보고한다. 2025–26에 "LR이 감쇠하면 손실과 양자화 오차가 분리된다"는 반론이 나왔고, 이 논문은 peak-LR·WSD vs cosine·weight decay·LAWA 개입 실험과 Hessian trace·sharpness 측정까지 이미 수행했다 ([Catalan-Tatjer et al. 2510.06213, ICLR 2026](https://arxiv.org/abs/2510.06213) [V]).
+4. 서빙 측 KV 양자화 이론은 추정량 수준(QJL 비편향 내적, TurboQuant Beta 주변분포)에 머물고, 어텐션 출력이나 토큰 수준 오차를 다루는 정리가 없다. QJL 잔차는 커뮤니티에서 "softmax가 분산을 증폭해 품질을 해친다"고 보고되어 vLLM 구현에서 제외됐다 ([vLLM TurboQuant docs](https://docs.vllm.ai/en/latest/api/vllm/model_executor/layers/quantization/turboquant/) [V]; 문서 주석이지 벤치마크는 아니다).
+5. 후학습 측에서는 "preimage box"(한 양자화 모델의 FP 원상)가 공격(Egashira et al. [2405.18137](https://arxiv.org/abs/2405.18137) [V]), unlearning 역전([2410.16454, ICLR 2025](https://arxiv.org/abs/2410.16454) [V]; 형식적 정리는 없고 Sec 5의 Δ_int4 ≫ Δ_int8 간격 비교가 전부), LoRA 머지 실패([QA-LoRA 2309.14717](https://arxiv.org/abs/2309.14717) [V]; QA-LoRA 자체의 머지는 그룹 상수를 zero-point에 흡수하므로 구성상 정확하고, 상한이 없는 것은 비제약 LoRA+PTQ 머지)를 관통하지만 누구도 통합 정리로 쓰지 않았다.
+
+### 0.3 arXiv 전문 대조로 수정한 항목
+
+전체 표는 `research_notes/arxiv_sweep/verify/SUMMARY.md`(84건), 섹션별 수정 사항은 `verify/by_section.md`에 있다. 본문에 반영한 주요 수정:
+
+| arXiv id | 초안의 서술 | 전문 대조 결과 | 반영 |
+|---|---|---|---|
+| 2604.08976 | GPTQ 4-bit가 ECE를 악화시킨다는 측정 | 그 문장은 이 논문의 related work이며 원출처는 Proskurina et al. 2405.00632 (Findings of NAACL 2024); 2604.08976 자체는 GGUF Q5_K_M vs f16 비교 | 2405.00632로 재귀속 |
+| 2608.01078 | 최신 모델은 캘리브레이션 데이터에 덜 민감 | 원출처는 Paglieri et al. 2405.20835 (ICML 2024 WS); 2608.01078의 자체 결과는 반대(통상 캘리브레이션으로 ternary PTQ가 수학·코딩에서 붕괴, 자가 생성 추론 흔적으로 복구) | 2405.20835로 재귀속, 2608.01078은 아이디어 8의 근거로 이동 |
+| 2411.17525 | "KL≈¼‖δ‖²", 1차 근사 | 식이 논문에 없음; 2차 Taylor에서 나온 층별 상대 MSE 선형식 | 0.2절 수정 |
+| 2405.16406 | "Haar 회전 간 13점" | "Haar" 없음; 무작위 회전 100회 최대 13점, Hadamard 간 6점 | 0.2절 수정 |
+| 2503.22879, 2508.10370 | "SSM 상태 양자화 학술 논문 0건" | Quamba2는 캐시된 SSM 상태를 정적 per-group 8-bit로 양자화(App. E); eMamba는 INT24 계산/INT17 저장 고정소수점 상태를 FPGA/ASIC에 구현 | 아이디어 2의 공백을 "피드백 없는 open-loop 정적 양자화만 존재"로 재정의 |
+| 2510.06213 | "남는 기여는 Δ² vs tr(H) 분해와 개입 실험" | 개입 실험(peak LR, WSD vs cosine, weight decay, LAWA)과 Hessian trace·sharpness 측정을 이미 수행 | 아이디어 4의 기여를 서명 분리 예측과 전환 시점 예측으로 축소 |
+| 2509.25149 | MXFP4 2.5% vs NVFP4 1.5% | 8B/1T, BF16 기준 상대 학습손실 오차(마지막 8블록 BF16 유지); 12B/10T 격차는 FP8 기준; 전환 실험은 BF16만, forward 전환이 1.5%→0.5% | 아이디어 3·4 수치 정정 |
+| 2606.20381 | "정량 이론이 없다" | bin 수준 닫힌 형태 Eq.(2) (2q_i−q_{i−1}−q_{i+1})/4와 곱셈 누적 항등식이 있음; 분포 수준·블록 크기 의존 닫힌 형태는 없음 | 아이디어 3의 공백을 분포·블록 수준으로 좁힘 |
+| 2605.08114 | "이질 분산이 만드는 체계적 편향 논의 없음" | Sec 3.1 Eq.(4) e^{σ²/2} 인자와 "σ²가 점수와 상관될 때 위험" 서술이 있음; fair-budget 인자는 2π | 아이디어 1의 선행 연구로 명시 |
+| 2510.05373 | KVLinC가 KIVI 축을 "반대로" | KIVI 축을 유지하고 V에만 Hadamard; K Hadamard가 per-channel에서 해롭다는 관찰 | 아이디어 1·9 수정 |
+| 2505.23786 | preimage box 계산 | k-quant는 정확한 preimage 구간 계산이 불가능해 오차 기반 근사 구간 사용 | 아이디어 7 수정 |
+| 2605.15152 | Egashira et al., ICML 2026 | 1저자 Zhan; ICML 2026 workshop | 아이디어 7 수정 |
+| 2604.06798 | MoBiE [S] | 저자 철회(2026-04-20) | 부록 A에서 [U]로 강등 |
+| 2604.08826 | HiFloat4 포맷 제안 | 포맷은 2602.11287; 2604.08826은 에뮬레이션 사전학습 연구 | 아이디어 3 수정 |
+| 2601.22813 | Quartet II 병목 = micro-scale SR 분산 | 병목은 원소별 FP4 SR 분산(RTN 대비 MSE 2.5배); 해법이 확률성을 FP8 micro-scale로 옮기는 것 | 아이디어 3·4 수정 |
+| 2604.08426, 2609.18063 | [U] | 존재·주장 확인 | [V]로 상향 |
 
 ---
 
