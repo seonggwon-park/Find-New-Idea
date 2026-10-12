@@ -1,0 +1,145 @@
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:09<43:47,  9.09s/it]Loading weights:  82%|████████▏ | 237/290 [00:09<00:01, 36.62it/s]Loading weights: 100%|██████████| 290/290 [00:10<00:00, 28.43it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (2517232 > 131072). Running this sequence through the model will result in indexing errors
+[starved] collected 96 Hessians from 512 tokens in 44s
+  starved 0.qkv n=896 d=1e-04:meas=2.522/eq33=2.510/nat=2.886/pca=4.815/eps=2.9e-07 d=1e-02:meas=0.460/eq33=0.452/nat=0.812/pca=2.465/eps=2.9e-05 d=1e-01:meas=0.059/eq33=0.056/nat=0.288/pca=1.301/eps=2.9e-04 (0s)
+  starved 0.o n=896 d=1e-04:meas=1.769/eq33=1.759/nat=1.645/pca=3.921/eps=2.5e-07 d=1e-02:meas=0.399/eq33=0.392/nat=0.532/pca=2.294/eps=2.5e-05 d=1e-01:meas=0.060/eq33=0.057/nat=0.165/pca=1.264/eps=2.5e-04 (0s)
+  starved 0.gateup n=896 d=1e-04:meas=2.280/eq33=2.280/nat=2.264/pca=4.010/eps=4.3e-07 d=1e-02:meas=0.600/eq33=0.599/nat=0.591/pca=2.163/eps=4.3e-05 d=1e-01:meas=0.100/eq33=0.098/nat=0.102/pca=1.116/eps=4.3e-04 (0s)
+  starved 0.down n=4864 d=1e-04:meas=3.231/eq33=3.227/nat=3.235/pca=5.934/eps=5.9e-07 d=1e-02:meas=0.603/eq33=0.600/nat=0.667/pca=2.961/eps=5.9e-05 d=1e-01:meas=0.088/eq33=0.088/nat=0.159/pca=1.508/eps=5.9e-04 (42s)
+  starved 1.qkv n=896 d=1e-04:meas=2.040/eq33=2.040/nat=2.117/pca=3.783/eps=7.5e-07 d=1e-02:meas=0.550/eq33=0.550/nat=0.637/pca=2.124/eps=7.5e-05 d=1e-01:meas=0.095/eq33=0.094/nat=0.170/pca=1.123/eps=7.5e-04 (0s)
+  starved 1.o n=896 d=1e-04:meas=1.446/eq33=1.445/nat=1.747/pca=4.240/eps=1.4e-07 d=1e-02:meas=0.211/eq33=0.209/nat=0.434/pca=2.540/eps=1.4e-05 d=1e-01:meas=0.021/eq33=0.020/nat=0.082/pca=1.421/eps=1.4e-04 (0s)
+  starved 1.gateup n=896 d=1e-04:meas=1.952/eq33=1.943/nat=1.992/pca=3.494/eps=5.1e-07 d=1e-02:meas=0.543/eq33=0.535/nat=0.578/pca=1.945/eps=5.1e-05 d=1e-01:meas=0.100/eq33=0.096/nat=0.122/pca=1.031/eps=5.1e-04 (0s)
+  starved 1.down n=4864 d=1e-04:meas=3.329/eq33=3.323/nat=3.305/pca=5.867/eps=4.7e-07 d=1e-02:meas=0.661/eq33=0.657/nat=0.672/pca=2.900/eps=4.7e-05 d=1e-01:meas=0.100/eq33=0.098/nat=0.129/pca=1.466/eps=4.7e-04 (41s)
+  starved 2.qkv n=896 d=1e-04:meas=1.902/eq33=1.896/nat=2.071/pca=3.606/eps=5.5e-07 d=1e-02:meas=0.503/eq33=0.498/nat=0.682/pca=2.041/eps=5.5e-05 d=1e-01:meas=0.089/eq33=0.086/nat=0.230/pca=1.101/eps=5.5e-04 (0s)
+  starved 2.o n=896 d=1e-04:meas=1.820/eq33=1.818/nat=1.802/pca=3.500/eps=7.5e-07 d=1e-02:meas=0.481/eq33=0.479/nat=0.595/pca=1.998/eps=7.5e-05 d=1e-01:meas=0.091/eq33=0.089/nat=0.199/pca=1.096/eps=7.5e-04 (0s)
+  starved 2.gateup n=896 d=1e-04:meas=1.883/eq33=1.880/nat=1.953/pca=3.376/eps=5.4e-07 d=1e-02:meas=0.514/eq33=0.512/nat=0.575/pca=1.873/eps=5.4e-05 d=1e-01:meas=0.095/eq33=0.094/nat=0.132/pca=1.001/eps=5.4e-04 (0s)
+  starved 2.down n=4864 d=1e-04:meas=0.840/eq33=0.994/nat=1.199/pca=6.188/eps=2.1e-08 d=1e-02:meas=0.012/eq33=0.020/nat=0.769/pca=3.188/eps=2.1e-06 d=1e-01:meas=0.001/eq33=0.001/nat=0.656/pca=1.685/eps=2.1e-05 (40s)
+  starved 3.qkv n=896 d=1e-04:meas=1.820/eq33=1.813/nat=2.074/pca=3.585/eps=4.9e-07 d=1e-02:meas=0.462/eq33=0.455/nat=0.735/pca=2.049/eps=4.9e-05 d=1e-01:meas=0.081/eq33=0.078/nat=0.304/pca=1.124/eps=4.9e-04 (0s)
+  starved 3.o n=896 d=1e-04:meas=1.722/eq33=1.707/nat=1.625/pca=3.667/eps=2.8e-07 d=1e-02:meas=0.406/eq33=0.396/nat=0.528/pca=2.139/eps=2.8e-05 d=1e-01:meas=0.066/eq33=0.062/nat=0.165/pca=1.191/eps=2.8e-04 (0s)
+  starved 3.gateup n=896 d=1e-04:meas=1.781/eq33=1.775/nat=2.544/pca=3.391/eps=5.0e-07 d=1e-02:meas=0.448/eq33=0.443/nat=1.110/pca=1.903/eps=5.0e-05 d=1e-01:meas=0.076/eq33=0.074/nat=0.463/pca=1.042/eps=5.0e-04 (0s)
+  starved 3.down n=4864 d=1e-04:meas=1.645/eq33=1.366/nat=2.112/pca=6.105/eps=2.1e-08 d=1e-02:meas=0.072/eq33=0.039/nat=1.957/pca=3.126/eps=2.1e-06 d=1e-01:meas=0.006/eq33=0.002/nat=1.252/pca=1.651/eps=2.1e-05 (39s)
+  starved 4.qkv n=896 d=1e-04:meas=1.715/eq33=1.706/nat=1.910/pca=3.540/eps=2.9e-07 d=1e-02:meas=0.399/eq33=0.392/nat=0.605/pca=2.032/eps=2.9e-05 d=1e-01:meas=0.062/eq33=0.060/nat=0.209/pca=1.132/eps=2.9e-04 (0s)
+  starved 4.o n=896 d=1e-04:meas=1.825/eq33=1.822/nat=1.985/pca=3.613/eps=5.2e-07 d=1e-02:meas=0.478/eq33=0.476/nat=0.732/pca=2.087/eps=5.2e-05 d=1e-01:meas=0.087/eq33=0.086/nat=0.268/pca=1.143/eps=5.2e-04 (0s)
+  starved 4.gateup n=896 d=1e-04:meas=1.788/eq33=1.782/nat=1.828/pca=3.304/eps=4.0e-07 d=1e-02:meas=0.460/eq33=0.455/nat=0.495/pca=1.835/eps=4.0e-05 d=1e-01:meas=0.082/eq33=0.079/nat=0.105/pca=1.000/eps=4.0e-04 (0s)
+  starved 4.down n=4864 d=1e-04:meas=3.338/eq33=3.329/nat=3.366/pca=5.845/eps=3.6e-07 d=1e-02:meas=0.665/eq33=0.659/nat=0.713/pca=2.880/eps=3.6e-05 d=1e-01:meas=0.099/eq33=0.097/nat=0.143/pca=1.451/eps=3.6e-04 (39s)
+  starved 5.qkv n=896 d=1e-04:meas=1.706/eq33=1.708/nat=1.880/pca=3.478/eps=3.4e-07 d=1e-02:meas=0.401/eq33=0.402/nat=0.575/pca=1.990/eps=3.4e-05 d=1e-01:meas=0.065/eq33=0.065/nat=0.187/pca=1.109/eps=3.4e-04 (0s)
+  starved 5.o n=896 d=1e-04:meas=1.700/eq33=1.701/nat=1.293/pca=3.748/eps=3.2e-07 d=1e-02:meas=0.393/eq33=0.392/nat=0.387/pca=2.206/eps=3.2e-05 d=1e-01:meas=0.063/eq33=0.062/nat=0.119/pca=1.228/eps=3.2e-04 (0s)
+  starved 5.gateup n=896 d=1e-04:meas=1.700/eq33=1.696/nat=1.782/pca=3.400/eps=2.8e-07 d=1e-02:meas=0.399/eq33=0.395/nat=0.467/pca=1.928/eps=2.8e-05 d=1e-01:meas=0.064/eq33=0.062/nat=0.102/pca=1.074/eps=2.8e-04 (0s)
+  starved 5.down n=4864 d=1e-04:meas=3.212/eq33=3.208/nat=3.324/pca=5.862/eps=1.9e-07 d=1e-02:meas=0.587/eq33=0.584/nat=0.735/pca=2.896/eps=1.9e-05 d=1e-01:meas=0.081/eq33=0.080/nat=0.200/pca=1.466/eps=1.9e-04 (40s)
+  starved 6.qkv n=896 d=1e-04:meas=1.676/eq33=1.674/nat=1.895/pca=3.569/eps=3.1e-07 d=1e-02:meas=0.382/eq33=0.380/nat=0.594/pca=2.069/eps=3.1e-05 d=1e-01:meas=0.061/eq33=0.059/nat=0.201/pca=1.161/eps=3.1e-04 (0s)
+  starved 6.o n=896 d=1e-04:meas=1.742/eq33=1.714/nat=1.286/pca=3.889/eps=3.3e-07 d=1e-02:meas=0.405/eq33=0.385/nat=0.408/pca=2.299/eps=3.3e-05 d=1e-01:meas=0.066/eq33=0.059/nat=0.126/pca=1.275/eps=3.3e-04 (0s)
+  starved 6.gateup n=896 d=1e-04:meas=1.711/eq33=1.713/nat=1.768/pca=3.391/eps=3.3e-07 d=1e-02:meas=0.408/eq33=0.410/nat=0.458/pca=1.921/eps=3.3e-05 d=1e-01:meas=0.068/eq33=0.068/nat=0.098/pca=1.069/eps=3.3e-04 (0s)
+  starved 6.down n=4864 d=1e-04:meas=3.291/eq33=3.290/nat=3.297/pca=5.850/eps=2.4e-07 d=1e-02:meas=0.635/eq33=0.634/nat=0.667/pca=2.884/eps=2.4e-05 d=1e-01:meas=0.092/eq33=0.091/nat=0.129/pca=1.455/eps=2.4e-04 (42s)
+  starved 7.qkv n=896 d=1e-04:meas=1.658/eq33=1.657/nat=1.800/pca=3.636/eps=3.0e-07 d=1e-02:meas=0.370/eq33=0.370/nat=0.565/pca=2.127/eps=3.0e-05 d=1e-01:meas=0.058/eq33=0.058/nat=0.231/pca=1.197/eps=3.0e-04 (0s)
+  starved 7.o n=896 d=1e-04:meas=1.788/eq33=1.778/nat=1.971/pca=3.502/eps=8.7e-07 d=1e-02:meas=0.464/eq33=0.457/nat=0.685/pca=2.010/eps=8.7e-05 d=1e-01:meas=0.087/eq33=0.084/nat=0.225/pca=1.112/eps=8.7e-04 (0s)
+  starved 7.gateup n=896 d=1e-04:meas=1.714/eq33=1.704/nat=1.760/pca=3.366/eps=3.4e-07 d=1e-02:meas=0.412/eq33=0.404/nat=0.454/pca=1.901/eps=3.4e-05 d=1e-01:meas=0.070/eq33=0.067/nat=0.099/pca=1.060/eps=3.4e-04 (0s)
+  starved 7.down n=4864 d=1e-04:meas=3.333/eq33=3.336/nat=3.293/pca=5.839/eps=3.0e-07 d=1e-02:meas=0.662/eq33=0.663/nat=0.660/pca=2.873/eps=3.0e-05 d=1e-01:meas=0.097/eq33=0.097/nat=0.119/pca=1.445/eps=3.0e-04 (41s)
+  starved 8.qkv n=896 d=1e-04:meas=1.657/eq33=1.644/nat=1.920/pca=3.619/eps=2.9e-07 d=1e-02:meas=0.373/eq33=0.363/nat=0.646/pca=2.116/eps=2.9e-05 d=1e-01:meas=0.060/eq33=0.057/nat=0.255/pca=1.194/eps=2.9e-04 (0s)
+  starved 8.o n=896 d=1e-04:meas=1.804/eq33=1.807/nat=1.544/pca=3.582/eps=6.0e-07 d=1e-02:meas=0.467/eq33=0.469/nat=0.622/pca=2.066/eps=6.0e-05 d=1e-01:meas=0.085/eq33=0.085/nat=0.231/pca=1.136/eps=6.0e-04 (1s)
+  starved 8.gateup n=896 d=1e-04:meas=1.700/eq33=1.705/nat=1.748/pca=3.360/eps=3.3e-07 d=1e-02:meas=0.403/eq33=0.405/nat=0.456/pca=1.897/eps=3.3e-05 d=1e-01:meas=0.067/eq33=0.067/nat=0.110/pca=1.058/eps=3.3e-04 (0s)
+  starved 8.down n=4864 d=1e-04:meas=3.357/eq33=3.356/nat=3.441/pca=5.833/eps=2.7e-07 d=1e-02:meas=0.677/eq33=0.676/nat=0.759/pca=2.868/eps=2.7e-05 d=1e-01:meas=0.100/eq33=0.100/nat=0.151/pca=1.440/eps=2.7e-04 (40s)
+  starved 9.qkv n=896 d=1e-04:meas=1.702/eq33=1.686/nat=2.093/pca=3.757/eps=5.0e-07 d=1e-02:meas=0.406/eq33=0.394/nat=0.970/pca=2.229/eps=5.0e-05 d=1e-01:meas=0.074/eq33=0.069/nat=0.540/pca=1.255/eps=5.0e-04 (0s)
+  starved 9.o n=896 d=1e-04:meas=1.788/eq33=1.778/nat=2.085/pca=3.773/eps=4.7e-07 d=1e-02:meas=0.438/eq33=0.430/nat=0.711/pca=2.205/eps=4.7e-05 d=1e-01:meas=0.075/eq33=0.072/nat=0.211/pca=1.218/eps=4.7e-04 (0s)
+  starved 9.gateup n=896 d=1e-04:meas=1.704/eq33=1.706/nat=1.772/pca=3.299/eps=3.7e-07 d=1e-02:meas=0.407/eq33=0.407/nat=0.470/pca=1.847/eps=3.7e-05 d=1e-01:meas=0.070/eq33=0.069/nat=0.109/pca=1.030/eps=3.7e-04 (0s)
+  starved 9.down n=4864 d=1e-04:meas=3.398/eq33=3.396/nat=3.424/pca=5.825/eps=3.7e-07 d=1e-02:meas=0.704/eq33=0.702/nat=0.744/pca=2.860/eps=3.7e-05 d=1e-01:meas=0.107/eq33=0.106/nat=0.141/pca=1.433/eps=3.7e-04 (40s)
+  starved 10.qkv n=896 d=1e-04:meas=1.644/eq33=1.640/nat=1.856/pca=3.523/eps=3.3e-07 d=1e-02:meas=0.368/eq33=0.365/nat=0.589/pca=2.044/eps=3.3e-05 d=1e-01:meas=0.059/eq33=0.058/nat=0.212/pca=1.157/eps=3.3e-04 (1s)
+  starved 10.o n=896 d=1e-04:meas=1.781/eq33=1.770/nat=1.764/pca=3.833/eps=3.9e-07 d=1e-02:meas=0.430/eq33=0.423/nat=0.709/pca=2.252/eps=3.9e-05 d=1e-01:meas=0.071/eq33=0.068/nat=0.237/pca=1.242/eps=3.9e-04 (0s)
+  starved 10.gateup n=896 d=1e-04:meas=1.685/eq33=1.678/nat=1.741/pca=3.363/eps=3.2e-07 d=1e-02:meas=0.395/eq33=0.389/nat=0.451/pca=1.905/eps=3.2e-05 d=1e-01:meas=0.067/eq33=0.064/nat=0.106/pca=1.070/eps=3.2e-04 (0s)
+  starved 10.down n=4864 d=1e-04:meas=3.291/eq33=3.293/nat=3.323/pca=5.841/eps=2.1e-07 d=1e-02:meas=0.635/eq33=0.635/nat=0.690/pca=2.875/eps=2.1e-05 d=1e-01:meas=0.090/eq33=0.090/nat=0.135/pca=1.448/eps=2.1e-04 (39s)
+  starved 11.qkv n=896 d=1e-04:meas=1.714/eq33=1.708/nat=2.064/pca=3.709/eps=5.8e-07 d=1e-02:meas=0.417/eq33=0.412/nat=0.928/pca=2.192/eps=5.8e-05 d=1e-01:meas=0.077/eq33=0.074/nat=0.500/pca=1.231/eps=5.8e-04 (0s)
+  starved 11.o n=896 d=1e-04:meas=1.770/eq33=1.775/nat=1.977/pca=4.227/eps=3.4e-07 d=1e-02:meas=0.366/eq33=0.368/nat=0.580/pca=2.489/eps=3.4e-05 d=1e-01:meas=0.053/eq33=0.053/nat=0.161/pca=1.365/eps=3.4e-04 (0s)
+  starved 11.gateup n=896 d=1e-04:meas=1.708/eq33=1.702/nat=1.749/pca=3.315/eps=4.1e-07 d=1e-02:meas=0.412/eq33=0.407/nat=0.453/pca=1.863/eps=4.1e-05 d=1e-01:meas=0.073/eq33=0.070/nat=0.104/pca=1.041/eps=4.1e-04 (0s)
+  starved 11.down n=4864 d=1e-04:meas=3.323/eq33=3.321/nat=3.311/pca=5.837/eps=4.1e-07 d=1e-02:meas=0.655/eq33=0.653/nat=0.684/pca=2.871/eps=4.1e-05 d=1e-01:meas=0.095/eq33=0.094/nat=0.146/pca=1.444/eps=4.1e-04 (39s)
+  starved 12.qkv n=896 d=1e-04:meas=1.687/eq33=1.682/nat=1.862/pca=3.440/eps=4.3e-07 d=1e-02:meas=0.399/eq33=0.394/nat=0.591/pca=1.972/eps=4.3e-05 d=1e-01:meas=0.069/eq33=0.067/nat=0.207/pca=1.109/eps=4.3e-04 (0s)
+  starved 12.o n=896 d=1e-04:meas=1.867/eq33=1.847/nat=2.689/pca=3.813/eps=5.8e-07 d=1e-02:meas=0.490/eq33=0.475/nat=1.212/pca=2.231/eps=5.8e-05 d=1e-01:meas=0.088/eq33=0.083/nat=0.453/pca=1.219/eps=5.8e-04 (0s)
+  starved 12.gateup n=896 d=1e-04:meas=1.677/eq33=1.677/nat=1.728/pca=3.359/eps=3.5e-07 d=1e-02:meas=0.390/eq33=0.390/nat=0.440/pca=1.903/eps=3.5e-05 d=1e-01:meas=0.066/eq33=0.065/nat=0.102/pca=1.069/eps=3.5e-04 (0s)
+  starved 12.down n=4864 d=1e-04:meas=3.348/eq33=3.347/nat=3.288/pca=5.832/eps=2.2e-07 d=1e-02:meas=0.671/eq33=0.669/nat=0.660/pca=2.867/eps=2.2e-05 d=1e-01:meas=0.099/eq33=0.098/nat=0.119/pca=1.440/eps=2.2e-04 (39s)
+  starved 13.qkv n=896 d=1e-04:meas=1.662/eq33=1.662/nat=1.812/pca=3.522/eps=4.1e-07 d=1e-02:meas=0.383/eq33=0.382/nat=0.586/pca=2.044/eps=4.1e-05 d=1e-01:meas=0.065/eq33=0.064/nat=0.242/pca=1.155/eps=4.1e-04 (0s)
+  starved 13.o n=896 d=1e-04:meas=1.779/eq33=1.769/nat=2.098/pca=3.823/eps=4.6e-07 d=1e-02:meas=0.431/eq33=0.423/nat=0.704/pca=2.246/eps=4.6e-05 d=1e-01:meas=0.073/eq33=0.070/nat=0.201/pca=1.240/eps=4.6e-04 (0s)
+  starved 13.gateup n=896 d=1e-04:meas=1.678/eq33=1.671/nat=1.737/pca=3.365/eps=3.4e-07 d=1e-02:meas=0.392/eq33=0.386/nat=0.446/pca=1.909/eps=3.4e-05 d=1e-01:meas=0.067/eq33=0.064/nat=0.105/pca=1.075/eps=3.4e-04 (0s)
+  starved 13.down n=4864 d=1e-04:meas=3.349/eq33=3.352/nat=3.369/pca=5.832/eps=2.9e-07 d=1e-02:meas=0.671/eq33=0.673/nat=0.710/pca=2.867/eps=2.9e-05 d=1e-01:meas=0.099/eq33=0.099/nat=0.132/pca=1.439/eps=2.9e-04 (39s)
+  starved 14.qkv n=896 d=1e-04:meas=1.678/eq33=1.668/nat=1.821/pca=3.457/eps=4.2e-07 d=1e-02:meas=0.393/eq33=0.385/nat=0.547/pca=1.988/eps=4.1e-05 d=1e-01:meas=0.068/eq33=0.065/nat=0.176/pca=1.122/eps=4.1e-04 (0s)
+  starved 14.o n=896 d=1e-04:meas=1.742/eq33=1.747/nat=1.988/pca=3.817/eps=3.1e-07 d=1e-02:meas=0.405/eq33=0.408/nat=0.702/pca=2.241/eps=3.1e-05 d=1e-01:meas=0.063/eq33=0.063/nat=0.219/pca=1.237/eps=3.1e-04 (0s)
+  starved 14.gateup n=896 d=1e-04:meas=1.641/eq33=1.638/nat=1.718/pca=3.452/eps=3.0e-07 d=1e-02:meas=0.367/eq33=0.364/nat=0.434/pca=1.986/eps=3.0e-05 d=1e-01:meas=0.059/eq33=0.058/nat=0.104/pca=1.125/eps=3.0e-04 (0s)
+  starved 14.down n=4864 d=1e-04:meas=3.247/eq33=3.242/nat=3.257/pca=5.851/eps=1.7e-07 d=1e-02:meas=0.607/eq33=0.604/nat=0.661/pca=2.885/eps=1.7e-05 d=1e-01:meas=0.084/eq33=0.084/nat=0.136/pca=1.457/eps=1.7e-04 (39s)
+  starved 15.qkv n=896 d=1e-04:meas=1.653/eq33=1.644/nat=1.811/pca=3.564/eps=3.9e-07 d=1e-02:meas=0.376/eq33=0.369/nat=0.548/pca=2.079/eps=3.9e-05 d=1e-01:meas=0.063/eq33=0.061/nat=0.192/pca=1.177/eps=3.9e-04 (0s)
+  starved 15.o n=896 d=1e-04:meas=1.754/eq33=1.736/nat=2.150/pca=3.829/eps=4.7e-07 d=1e-02:meas=0.421/eq33=0.408/nat=0.777/pca=2.260/eps=4.7e-05 d=1e-01:meas=0.071/eq33=0.067/nat=0.238/pca=1.254/eps=4.7e-04 (0s)
+  starved 15.gateup n=896 d=1e-04:meas=1.640/eq33=1.636/nat=1.703/pca=3.459/eps=2.9e-07 d=1e-02:meas=0.366/eq33=0.362/nat=0.426/pca=1.992/eps=2.9e-05 d=1e-01:meas=0.059/eq33=0.057/nat=0.102/pca=1.128/eps=2.9e-04 (0s)
+  starved 15.down n=4864 d=1e-04:meas=3.229/eq33=3.227/nat=3.298/pca=5.854/eps=1.7e-07 d=1e-02:meas=0.597/eq33=0.595/nat=0.694/pca=2.888/eps=1.7e-05 d=1e-01:meas=0.082/eq33=0.082/nat=0.153/pca=1.460/eps=1.7e-04 (39s)
+  starved 16.qkv n=896 d=1e-04:meas=1.708/eq33=1.699/nat=1.828/pca=3.612/eps=4.1e-07 d=1e-02:meas=0.409/eq33=0.402/nat=0.634/pca=2.108/eps=4.1e-05 d=1e-01:meas=0.071/eq33=0.068/nat=0.273/pca=1.181/eps=4.1e-04 (1s)
+  starved 16.o n=896 d=1e-04:meas=1.964/eq33=1.953/nat=1.581/pca=3.812/eps=9.6e-07 d=1e-02:meas=0.529/eq33=0.521/nat=0.593/pca=2.191/eps=9.6e-05 d=1e-01:meas=0.098/eq33=0.094/nat=0.183/pca=1.183/eps=9.6e-04 (0s)
+  starved 16.gateup n=896 d=1e-04:meas=1.658/eq33=1.651/nat=1.729/pca=3.454/eps=2.9e-07 d=1e-02:meas=0.378/eq33=0.372/nat=0.452/pca=1.985/eps=2.9e-05 d=1e-01:meas=0.062/eq33=0.059/nat=0.115/pca=1.120/eps=2.9e-04 (0s)
+  starved 16.down n=4864 d=1e-04:meas=3.281/eq33=3.276/nat=3.446/pca=5.850/eps=2.3e-07 d=1e-02:meas=0.629/eq33=0.626/nat=0.815/pca=2.884/eps=2.3e-05 d=1e-01:meas=0.090/eq33=0.089/nat=0.209/pca=1.456/eps=2.3e-04 (40s)
+  starved 17.qkv n=896 d=1e-04:meas=1.699/eq33=1.693/nat=1.835/pca=3.488/eps=4.2e-07 d=1e-02:meas=0.404/eq33=0.400/nat=0.555/pca=2.009/eps=4.2e-05 d=1e-01:meas=0.070/eq33=0.068/nat=0.188/pca=1.127/eps=4.2e-04 (1s)
+  starved 17.o n=896 d=1e-04:meas=1.546/eq33=1.553/nat=1.589/pca=4.274/eps=1.6e-07 d=1e-02:meas=0.253/eq33=0.257/nat=0.421/pca=2.549/eps=1.6e-05 d=1e-01:meas=0.029/eq33=0.029/nat=0.108/pca=1.413/eps=1.6e-04 (0s)
+  starved 17.gateup n=896 d=1e-04:meas=1.642/eq33=1.637/nat=1.694/pca=3.487/eps=2.5e-07 d=1e-02:meas=0.365/eq33=0.361/nat=0.421/pca=2.012/eps=2.5e-05 d=1e-01:meas=0.057/eq33=0.055/nat=0.097/pca=1.137/eps=2.5e-04 (0s)
+  starved 17.down n=4864 d=1e-04:meas=3.281/eq33=3.279/nat=3.347/pca=5.850/eps=1.9e-07 d=1e-02:meas=0.629/eq33=0.627/nat=0.741/pca=2.885/eps=1.9e-05 d=1e-01:meas=0.090/eq33=0.089/nat=0.179/pca=1.456/eps=1.9e-04 (38s)
+  starved 18.qkv n=896 d=1e-04:meas=1.672/eq33=1.680/nat=1.815/pca=3.475/eps=3.7e-07 d=1e-02:meas=0.385/eq33=0.391/nat=0.530/pca=1.999/eps=3.7e-05 d=1e-01:meas=0.064/eq33=0.065/nat=0.170/pca=1.123/eps=3.7e-04 (0s)
+  starved 18.o n=896 d=1e-04:meas=1.744/eq33=1.740/nat=1.750/pca=3.764/eps=3.6e-07 d=1e-02:meas=0.412/eq33=0.408/nat=0.586/pca=2.205/eps=3.6e-05 d=1e-01:meas=0.068/eq33=0.066/nat=0.185/pca=1.223/eps=3.6e-04 (0s)
+  starved 18.gateup n=896 d=1e-04:meas=1.676/eq33=1.667/nat=1.700/pca=3.437/eps=2.8e-07 d=1e-02:meas=0.388/eq33=0.380/nat=0.415/pca=1.967/eps=2.8e-05 d=1e-01:meas=0.064/eq33=0.061/nat=0.087/pca=1.106/eps=2.8e-04 (0s)
+  starved 18.down n=4864 d=1e-04:meas=3.290/eq33=3.287/nat=3.349/pca=5.849/eps=2.8e-07 d=1e-02:meas=0.634/eq33=0.632/nat=0.721/pca=2.883/eps=2.8e-05 d=1e-01:meas=0.091/eq33=0.090/nat=0.164/pca=1.454/eps=2.8e-04 (36s)
+  starved 19.qkv n=896 d=1e-04:meas=1.633/eq33=1.627/nat=1.871/pca=3.646/eps=3.2e-07 d=1e-02:meas=0.360/eq33=0.355/nat=0.612/pca=2.143/eps=3.2e-05 d=1e-01:meas=0.058/eq33=0.056/nat=0.240/pca=1.213/eps=3.2e-04 (0s)
+  starved 19.o n=896 d=1e-04:meas=1.690/eq33=1.681/nat=1.554/pca=3.684/eps=3.6e-07 d=1e-02:meas=0.393/eq33=0.386/nat=0.390/pca=2.165/eps=3.6e-05 d=1e-01:meas=0.066/eq33=0.063/nat=0.094/pca=1.214/eps=3.6e-04 (1s)
+  starved 19.gateup n=896 d=1e-04:meas=1.646/eq33=1.640/nat=1.670/pca=3.486/eps=2.5e-07 d=1e-02:meas=0.367/eq33=0.362/nat=0.397/pca=2.010/eps=2.5e-05 d=1e-01:meas=0.058/eq33=0.055/nat=0.085/pca=1.135/eps=2.5e-04 (0s)
+  starved 19.down n=4864 d=1e-04:meas=3.245/eq33=3.243/nat=3.289/pca=5.857/eps=2.4e-07 d=1e-02:meas=0.606/eq33=0.606/nat=0.710/pca=2.892/eps=2.4e-05 d=1e-01:meas=0.085/eq33=0.085/nat=0.177/pca=1.462/eps=2.4e-04 (41s)
+  starved 20.qkv n=896 d=1e-04:meas=1.754/eq33=1.746/nat=1.974/pca=3.579/eps=4.5e-07 d=1e-02:meas=0.437/eq33=0.431/nat=0.700/pca=2.073/eps=4.5e-05 d=1e-01:meas=0.077/eq33=0.075/nat=0.281/pca=1.152/eps=4.5e-04 (0s)
+  starved 20.o n=896 d=1e-04:meas=1.399/eq33=1.395/nat=0.813/pca=4.488/eps=1.4e-07 d=1e-02:meas=0.182/eq33=0.178/nat=0.130/pca=2.687/eps=1.4e-05 d=1e-01:meas=0.019/eq33=0.017/nat=0.022/pca=1.488/eps=1.4e-04 (0s)
+  starved 20.gateup n=896 d=1e-04:meas=1.680/eq33=1.659/nat=1.700/pca=3.492/eps=2.7e-07 d=1e-02:meas=0.391/eq33=0.375/nat=0.420/pca=2.013/eps=2.7e-05 d=1e-01:meas=0.066/eq33=0.059/nat=0.093/pca=1.133/eps=2.7e-04 (0s)
+  starved 20.down n=4864 d=1e-04:meas=3.118/eq33=3.121/nat=3.133/pca=5.878/eps=1.2e-07 d=1e-02:meas=0.533/eq33=0.535/nat=0.647/pca=2.912/eps=1.2e-05 d=1e-01:meas=0.070/eq33=0.070/nat=0.167/pca=1.481/eps=1.2e-04 (38s)
+  starved 21.qkv n=896 d=1e-04:meas=1.839/eq33=1.828/nat=2.265/pca=3.769/eps=4.7e-07 d=1e-02:meas=0.480/eq33=0.471/nat=0.990/pca=2.206/eps=4.7e-05 d=1e-01:meas=0.087/eq33=0.083/nat=0.457/pca=1.209/eps=4.7e-04 (0s)
+  starved 21.o n=896 d=1e-04:meas=1.837/eq33=1.802/nat=1.904/pca=4.694/eps=1.6e-07 d=1e-02:meas=0.315/eq33=0.297/nat=0.975/pca=2.709/eps=1.6e-05 d=1e-01:meas=0.037/eq33=0.033/nat=0.359/pca=1.455/eps=1.6e-04 (0s)
+  starved 21.gateup n=896 d=1e-04:meas=1.725/eq33=1.712/nat=2.068/pca=3.485/eps=3.9e-07 d=1e-02:meas=0.421/eq33=0.411/nat=0.707/pca=2.003/eps=3.9e-05 d=1e-01:meas=0.074/eq33=0.070/nat=0.222/pca=1.118/eps=3.9e-04 (0s)
+  starved 21.down n=4864 d=1e-04:meas=1.975/eq33=1.982/nat=3.349/pca=6.032/eps=2.4e-08 d=1e-02:meas=0.118/eq33=0.119/nat=2.336/pca=3.060/eps=2.4e-06 d=1e-01:meas=0.009/eq33=0.009/nat=1.330/pca=1.603/eps=2.4e-05 (40s)
+  starved 22.qkv n=896 d=1e-04:meas=1.847/eq33=1.841/nat=2.254/pca=3.879/eps=5.2e-07 d=1e-02:meas=0.479/eq33=0.474/nat=1.016/pca=2.290/eps=5.2e-05 d=1e-01:meas=0.086/eq33=0.084/nat=0.501/pca=1.255/eps=5.2e-04 (0s)
+  starved 22.o n=896 d=1e-04:meas=1.732/eq33=1.659/nat=1.417/pca=4.289/eps=2.3e-07 d=1e-02:meas=0.364/eq33=0.320/nat=0.239/pca=2.563/eps=2.3e-05 d=1e-01:meas=0.055/eq33=0.043/nat=0.033/pca=1.409/eps=2.3e-04 (0s)
+  starved 22.gateup n=896 d=1e-04:meas=1.720/eq33=1.719/nat=1.745/pca=3.462/eps=3.8e-07 d=1e-02:meas=0.417/eq33=0.416/nat=0.446/pca=1.983/eps=3.8e-05 d=1e-01:meas=0.073/eq33=0.072/nat=0.096/pca=1.106/eps=3.8e-04 (0s)
+  starved 22.down n=4864 d=1e-04:meas=2.968/eq33=2.975/nat=3.164/pca=5.909/eps=9.9e-08 d=1e-02:meas=0.454/eq33=0.457/nat=0.656/pca=2.942/eps=9.9e-06 d=1e-01:meas=0.056/eq33=0.056/nat=0.173/pca=1.507/eps=9.9e-05 (35s)
+  starved 23.qkv n=896 d=1e-04:meas=1.839/eq33=1.822/nat=2.279/pca=3.891/eps=4.8e-07 d=1e-02:meas=0.476/eq33=0.463/nat=1.039/pca=2.303/eps=4.8e-05 d=1e-01:meas=0.087/eq33=0.082/nat=0.508/pca=1.265/eps=4.8e-04 (0s)
+  starved 23.o n=896 d=1e-04:meas=1.921/eq33=1.922/nat=2.805/pca=4.114/eps=3.5e-07 d=1e-02:meas=0.465/eq33=0.465/nat=1.240/pca=2.401/eps=3.5e-05 d=1e-01:meas=0.076/eq33=0.075/nat=0.455/pca=1.299/eps=3.5e-04 (0s)
+  starved 23.gateup n=896 d=1e-04:meas=1.712/eq33=1.699/nat=1.761/pca=3.533/eps=3.4e-07 d=1e-02:meas=0.412/eq33=0.402/nat=0.464/pca=2.044/eps=3.4e-05 d=1e-01:meas=0.071/eq33=0.067/nat=0.113/pca=1.144/eps=3.4e-04 (0s)
+  starved 23.down n=4864 d=1e-04:meas=2.474/eq33=2.457/nat=2.648/pca=5.997/eps=4.8e-08 d=1e-02:meas=0.250/eq33=0.244/nat=0.546/pca=3.026/eps=4.8e-06 d=1e-01:meas=0.025/eq33=0.024/nat=0.174/pca=1.574/eps=4.8e-05 (38s)
+SUMMARY: {
+ "starved_1e-04": {
+  "n_hessians": 96,
+  "spearman_eq33_vs_meas": 0.9912913727618015,
+  "max_abs_diff": 0.27916030457186225,
+  "mean_abs_diff": 0.011846886831821715,
+  "gap_meas_median": 1.7542957830098524,
+  "gap_meas_max": 3.398482084945542,
+  "frac_gap_gt_0_3": 1.0,
+  "frac_gap_gt_0_1": 1.0,
+  "native_median": 1.9153060661356425,
+  "pca_median": 3.7526864013995183,
+  "bound_over_meas_median": 3.3515279599320764,
+  "eps_eff_median": 3.38959530291033e-07
+ },
+ "starved_1e-02": {
+  "n_hessians": 96,
+  "spearman_eq33_vs_meas": 0.9944248507867607,
+  "max_abs_diff": 0.04370743419247458,
+  "mean_abs_diff": 0.005699511338687283,
+  "gap_meas_median": 0.4121092955789963,
+  "gap_meas_max": 0.703655092126454,
+  "frac_gap_gt_0_3": 0.9270833333333334,
+  "frac_gap_gt_0_1": 0.9791666666666666,
+  "native_median": 0.6168978936051202,
+  "pca_median": 2.1781865025595515,
+  "bound_over_meas_median": 7.335918887779839,
+  "eps_eff_median": 3.3894815619434266e-05
+ },
+ "starved_1e-01": {
+  "n_hessians": 96,
+  "spearman_eq33_vs_meas": 0.9907623440043406,
+  "max_abs_diff": 0.012191342538609554,
+  "mean_abs_diff": 0.0021121603126761997,
+  "gap_meas_median": 0.07050235885799175,
+  "gap_meas_max": 0.1067964696257691,
+  "frac_gap_gt_0_3": 0.0,
+  "frac_gap_gt_0_1": 0.020833333333333332,
+  "native_median": 0.1702340975073794,
+  "pca_median": 1.211008932608936,
+  "bound_over_meas_median": 25.564329201624712,
+  "eps_eff_median": 0.0003388447903172478
+ }
+}
+total 1069s
